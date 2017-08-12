@@ -1,4 +1,4 @@
-# Logic-Based Benders decomposition applied to the SUALBSP-2
+# Benders decomposition of the SUALBSP-2
 
 Logic-based Benders decomposition applied to the type-2 SetUp Assembly Line Balancing and Scheduling Problem (SUALBSP-2).
 
