@@ -1,0 +1,90 @@
+\documentclass[mres, copyrightpage]{mqthesis}
+%----------------------------------------------------------
+% OPTIONS
+% Options you can use in the documentclass above:
+%
+% phd/mres/hons = set the degree text [default=phd]
+% copyrightpage d= print a copyright page on the back 
+%                 of the title page [default=false]
+% examinerscopy = print "Examiner's Copy" of title page and 
+%                 change linespacing to 1.5 [default=false]
+% greychapternumbers = print large chapter numbers in grey
+%                 instead of MQ corporate "sand"
+%---------------------------------------------------------- 
+
+% this shows what labels you are using for cross references
+% \usepackage{showkeys} 
+
+%---------------------------------------------------------- 
+% STRUCTURE
+% this document is a skeleton which pulls in the meat of the thesis
+% from other files. Comment out and add lines as appropriate.
+%---------------------------------------------------------- 
+
+\usepackage{pdflscape}
+\begin{document}
+
+%---------------------------------------------------------- 
+% FRONT
+% Acknowledgements, titlepage, abstract, list of publications
+%---------------------------------------------------------- 
+\frontmatter
+
+\title{Logic-Based Benders Decomposition applied to the Setup Assembly Line Balancing and Scheduling Problem}
+\author{Kenneth Young}
+\department{School of Mathematics and Statistics}  % put your department here
+
+\titlepage
+
+\input{acknowledge}
+% \input{listofpublications}
+\input{abstract}
+
+\tableofcontents
+% comment out these as required for your discipline
+\listoffigures
+\listoftables
+
+%---------------------------------------------------------- 
+% MAIN
+% include chapters as neededlmodern
+%---------------------------------------------------------- 
+\mainmatter
+
+% Introduction
+\input{chap_intro}
+
+\input{chap_theory}
+\input{chap_mipmodels}
+\input{chap_benders}
+\input{chap_experiments}
+
+% Conclusion
+\input{chap_conclusion}
+
+
+
+%---------------------------------------------------------- 
+% APPENDICES
+% include chapters as needed (will be numbered differently)
+%---------------------------------------------------------- 
+\appendix
+
+\input{chap_appendix}
+
+
+
+
+%---------------------------------------------------------- 
+% BACK
+% list of symbols / references / index etc
+%---------------------------------------------------------- 
+\backmatter
+
+% your thesis may not need this, so comment out or delete the following line
+% \input{listofsymbols}
+
+% Bibliography, in BibTeX format (the references.bib file)
+\bibliography{references}
+
+\end{document}

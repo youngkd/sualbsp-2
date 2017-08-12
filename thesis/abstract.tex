@@ -1,0 +1,42 @@
+\chapter{Abstract}
+
+Balancing the workload of an assembly line
+leads to a decision problem where the aim is to
+assign a set of tasks to a sequence of work stations,
+whilst optimising a measure of performance, \eg maximising the production
+rate.
+The SetUp Assembly Line Balancing and Scheduling Problem (\sua{})
+is a recent variant on the classical Assembly Line Balancing Problem (\albp{}).
+This new problem introduces sequence-dependent
+setup times between any pair of consecutive tasks
+processed within a work station's task sequence.
+Considering these setup times leads an additional layer
+of complexity as the problem now involves a set
+of scheduling decisions for each station along the production line.
+
+Benders decomposition naturally suggests itself as an appropriate
+approach for the \sua{} as we can divide the problem's decisions
+into two distinct sets.
+We propose a general logic-based Benders decomposition framework which 
+leads to the assignment portion being decided by a relaxed
+master problem and a number of sub-problems which together
+handle the scheduling portion.
+Each sub-problem is highly combinatorial in nature and so
+we consider state-of-the-art solving technology from
+both Operations Research and Artificial Intelligence
+to solve the scheduling problem efficiently.
+% We provide a detailed experimental analysis into the superior 
+% sub-problem formulation
+A range of Benders cuts are devised 
+and their practical effectiveness
+is one of our primary contributions to the 
+literature.
+
+We test the best-known exact methods to solve
+the \sua{} and use these models
+as a benchmark against which to scrutinise our hybrid solution methodology.
+In total, 396 instances of the problem were tested and our Benders
+decomposition approach vastly outperformed the best models from the literature.
+Due to this variant of the \albp{} being notably under-studied,
+we conclude the paper by remarking on a range of possible future directions
+which the research community could investigate.

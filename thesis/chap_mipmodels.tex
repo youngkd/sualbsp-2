@@ -1,0 +1,428 @@
+%!TEX root = thesis-kdyoung.tex
+
+% \begin{savequote}%[45mm]
+% ---The formulation of the problem is often more essential than its solution
+% \qauthor{Albert Einstein}
+% \end{savequote}
+
+\chapter{Mixed-Integer Programming Formulation}
+\label{chap:mip}
+This chapter presents three possible mixed-integer programs to model
+the \sua{2}.
+We adapt the work of \authciteb{Esmaeilbeigi2016}, in which
+three similar formulations were presented.
+These programs will provide a benchmark against which
+to test our solution methodology presented in the following
+chapter.
+\citeauthor{Esmaeilbeigi2016} gave possible valid inequalities
+which could be added to these formulations, however these 
+additional constraints are as yet untested by the literature.
+
+One of the research aims we have for our project is to test and compare
+our solution methodology against those previously presented
+in the literature.
+However, due to the limited research that has
+been done into the type-2 variant of the \sua{}, there is little
+work to compare our approach against.
+The only computational results available which are related to the
+\sua{2} are by \authciteb{Yolmeh2012}.
+For reasons detailed in Section \ref{sec:exp:data}, we chose to test
+on a different set of data to that of \citeauthor{Yolmeh2012},
+which meant that there is currently no computational
+results that can be used to make a direct comparison.
+It is possible to roughly judge the quality our results against those of \citeauthor{Yolmeh2012}
+by comparing how our solution procedure performs on instances
+of similar size.
+However, to gain an exact measurement of the quality of different
+approaches, we were motivated to implement and test the mixed-integer programs presented
+in \citeauthor{Esmaeilbeigi2016}.
+
+In order to capture a richer structure of the \sua{},
+Table \ref{tab:mipParams} expands upon the notation that was defined earlier in 
+Section \ref{sec:intro:probDef}. The work of \citeauthor{Esmaeilbeigi2016}
+provides the basis of the notation we formulated for our central thesis.
+Our choice of big-$M$ value listed in Table \ref{tab:mipParams} 
+is calculated as the maximum possible cycle time value, 
+which is detailed later in Equation \ref{eq:mip:cUB}.
+
+\begin{table}[tbp]
+	\def\arraystretch{1.1}
+	\centering
+	\caption{Notation Summary}
+	\vspace{2mm}
+	\begin{tabular}{lp{0.8\textwidth}}
+		\toprule
+		Notation & Definition  \\\midrule\midrule
+		$n$ & The number of tasks\\
+		$m$ & The number of stations\\
+		$V$ & Set of tasks, indexed by $i$, $j$ and $v$ \\
+		$K$ & Set of stations, indexed by $k$ \\
+		$E (E^*)$ & Set of direct (all) $(i,j)$ precedence relations\\
+		$t_i$ & Processing time of task $i$ \\
+		$t_{\text{sum}}$ & Sum of all processing times, $\sum_{i\in V}t_i$ \\
+		$P_i (P_i^*)$ & Set of direct (all) predecessors of task $i \in V$ \\
+		$F_i (F_i^*)$ & Set of direct (all) successors of task $i \in V$ \\
+		$\phi_{ij}$ & Setup time of task $j \in V$ when performed immediately after task $i \in V$ in the forward station load\\
+		$\beta_{ij}$ & Setup time of task $j \in V$ when performed immediately after task $i \in V$ in the backward station load\\
+		$F_i^\phi$ & Set of tasks which may directly follow task $i \in V$ in the forward station load,
+					$F_i^\phi=\{\:j\in V- (F_i^*-F_i)-P_i^*-\{i\}\:|\: FS_i\cap FS_j \neq \emptyset\:\}$\\
+		$F_i^\beta$ & Set of tasks which may directly follow task $i \in V$ in the backward station load,
+					$F_i^\beta=\{\:j\in V- F_i^*\:|\: FS_i\cap FS_j \neq \emptyset\:\}$.\\
+		$P_i^\phi$ & Set of tasks which may directly precede task $i \in V$ in the forward station load,
+					$P_i^\phi=\{\: j \in V \:|\: i \in F_j^\phi \:\}$ \\
+		$P_i^\beta$ & Set of tasks which may directly precede task $i \in V$ in the backward station load,
+					$P_i^\beta=\{\: j \in V \:|\: i \in F_j^\beta \:\}$ \\
+		$FS_i$ & Set of stations which task $i \in V$ can be feasibly assigned\\
+		$FT_k$ & Set of tasks which can be feasibly assigned to station $k \in K$\\
+		$\bar{c}(\ul{c})$ & Upper (lower) bound on the cycle time \\
+		$M$ & Sufficiently large ``big-$M$'' value, $M=t_{sum} + \beta_{n,1} + \sum_{i=1}^{n-1} \phi_{i,i+1} $ \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:mipParams}
+\end{table}
+
+To illustrate how this notation can define the input properties of the
+\sua{2}, we return to the simple instance of the problem 
+in Example \ref{ex:mip:notationIllust} originally presented
+in Chapter \ref{chap:intro}.
+\begin{example}\label{ex:mip:notationIllust}
+	Again, consider the instance of the \sua{2} as defined
+	previously in Example \ref{ex:intro:simpleSetup},
+	with setup times defined in Tables \ref{tab:intro:forwSetupTimes}
+	and \ref{tab:intro:backSetupTimes} (see Chap. \ref{chap:intro}).
+	This simple example has input parameters defined as follows,
+	\begin{IEEEeqnarray}{rClCrCl}
+		V &=& \{1,2,3,4=n\}, &\hspace{4mm}& K &=& \{1,2,3=m\}, \nonumber\\[\eqnv]
+		E &=& \big\{(1,2),(2,3),(2,4)\big\}, & & t&=&(6,5,2,9), \nonumber\\[\eqnv]
+		F_i^\phi &=& \big(\{2\},\{3,4\},\{4\},\{3\}\big), & & F_i^\beta&=&\big(\{1\},\{1,2\},\{1,2,3,4\},\{1,2,3,4\}\big), \nonumber\\[\eqnv]
+		P_i^\phi &=& \big(\emptyset,\{1\},\{2,4\},\{2,3\}\big), & & P_i^\beta&=&\big(\{1,2,3,4\},\{2,3,4\},\{3,4\},\{3,4\}\big), \nonumber\\[\eqnv]
+		FS_i &=& \big(K \:|\: i \in V\big) , & & FT_k&=& \big( V \:|\: k \in K\big). \nonumber
+	\end{IEEEeqnarray}
+	Note: for brevity we have omitted the parameters defined by the transitive closure
+	operator, \ie $E^*$, $P_i^*$ and $F_i^*$.
+	The big-$M$ value is calculated by
+	\[
+		M=t_{sum} + \beta_{n,1} + \sum_{i=1}^{n-1} \phi_{i,i+1} =22 + 3 + (0+3+3)= 31. \qed
+	\]
+\end{example}
+
+\section{First Station-Based Formulation}
+\label{sec:mip:fsbf}
+The first mixed integer program
+of the \sua{2} that we present is a station-based
+formulation, and for brevity we denote
+this formulation by \fsbf{2}.
+The decisions of a station-based formulation are related to the stations
+along the assembly line.
+
+The definitions of the decision variables in this model
+have been presented in Table \ref{tab:mip:fsbfVars}.
+The primary decision is denoted by $c$, which is a continuous
+variable indicating the cycle time of the assembly line.
+The start times, $s_i$, of each task denote when a task
+begins execution relative to the launch time of the station where
+task $i$ is performed at.
+The assignment decisions between the tasks and stations
+are encoded by variables $x_{ik}$.
+Binary variables $y_{ij}$ and $z_{ij}$ are true if task $j$
+follows task $i$ in the forward and backward station load respectively.
+% Binary variable $o_{ik}$ is straightforward so we refer the reader 
+% to Table \ref{tab:mip:fsbfVars}.
+The continuous variable $w_i$ denotes the station number of task $i$.
+
+\begin{table}[tbp]
+	\def\arraystretch{1.1}
+	\centering
+	\caption{Decision variables of FSBF-2}
+	\vspace{2mm}
+	\begin{tabular}{lp{0.8\textwidth}}
+		\toprule
+		Variable & Definition \\\midrule\midrule
+		$c$ & cycle time of the assembly line, continuous\\
+		$s_i$ & start time of task $i\in V$, continuous \\
+		$x_{ik}$ & 1 iff task $i \in V$ is assigned to station $k \in FS_i$ \\
+		$y_{ij}$ & 1 iff task $i \in V$ is followed directly by task $j \in F_i^\phi$ in the forward station load \\
+		$z_{ij}$ & 1 iff task $i \in V$ is the last task completed and task $j \in F_i^\beta$ is the first in the same station \\
+		$o_{ik}$ & 1 iff task $i \in V$ is the last task processed on station $k \in FS_i$ \\
+		$w_i$ & encodes the number of the station task $i\in V$ is assigned, continuous \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:mip:fsbfVars}
+\end{table}
+
+\begin{IEEEeqnarray}{rClCl}
+	\IEEEeqnarraymulticol{3}{l}{\text{\fsbf{2}: Min } c} & \hspace{4mm} & \label{eq:mip:fsbf1}\\[\eqnv]
+	\text{s.t. } & \hspace{4mm} & \sum_{k\in FS_i} x_{ik} = 1 & & \forall i \in V \label{eq:mip:fsbf3}\\[\eqnv]
+	& & \sum_{k\in FS_i} k\cdot x_{ik} = w_i & & \forall i \in V \label{eq:mip:fsbf4}\\[\eqnv]
+	& & \sum_{j\in F_i^\phi} y_{ij} + \sum_{j\in F_i^\beta}z_{ij} = 1 & & \forall i \in V \label{eq:mip:fsbf5}\\[\eqnv]
+	& & \sum_{i\in P_j^\phi} y_{ij} + \sum_{i\in P_j^\beta}z_{ij} = 1 & & \forall j \in V \label{eq:mip:fsbf6}\\[\eqnv]
+	& & o_{ik} \leq x_{ik} & & \forall i \in V,~ k \in FS_i \label{eq:mip:fsbf7}\\[\eqnv]
+	& & \sum_{j\in F_i^\beta} z_{ij} \leq \sum_{k\in FS_i} o_{ik} & & \forall i \in V \label{eq:mip:fsbf8}\\[\eqnv]
+	& & \sum_{i\in FT_k} o_{ik} \leq 1 & & \forall k \in K \label{eq:mip:fsbf9}\\[\eqnv]
+	& & w_j - w_i \leq M\cdot(1-y_{ij}) & & \nonumber\\[\smolEqnv]
+	& & \text{ and }~w_i - w_j \leq M\cdot(1-y_{ij}) & & \forall i \in V,~ j \in F_i^\phi \label{eq:mip:fsbf10}\\[\eqnv]
+	& & w_j - w_i \leq M\cdot(1-z_{ij}) & & \nonumber\\[\smolEqnv]
+	& & \text{ and }~w_i - w_j \leq M\cdot(1-z_{ij}) & & \forall i \in V,~ j \in F_i^\beta \label{eq:mip:fsbf11}\\[\eqnv]
+	& & \sum_{i\in FT_k} t_i\cdot x_{ik}\leq c & & \forall k \in K \label{eq:mip:fsbf12}\\[\eqnv]
+	& & s_i+t_i+\sum_{j\in F_i^{\beta}} \beta_{ij}\cdot z_{ij}\leq c & & \forall i \in V \label{eq:mip:fsbf13}\\[\eqnv]
+	& & \sum_{i\in V}\sum_{j\in F_i^\beta}z_{ij}\geq m & &  \label{eq:mip:fsbf14}\\[\eqnv]
+	& & s_i+c\cdot(w_i-w_j)+t_i+\phi_{ij}\cdot y_{ij} \leq s_j & & \forall (i,j) \in E \label{eq:mip:fsbf15}\\[\eqnv]
+	& & s_i+(t_i+\phi_{ij})+(c+\phi_{ij})\cdot (y_{ij}-1) \leq s_j & & \forall i \in V,~ j \in F_i^\phi\setminus F_i \label{eq:mip:fsbf16}\\[\eqnv]
+	& & \ul{c}\leq c \leq \bar{c} & &  \label{eq:mip:fsbf17}\\[\eqnv]
+	& & s_i \geq 0 & & \forall i \in V \label{eq:mip:fsbf18}\\[\eqnv]
+	& & x_{ik}\in\{0,1\} & & \forall i \in V,~ k \in FS_i \label{eq:mip:fsbf19}\\[\eqnv]
+	& & y_{ij}\in\{0,1\} & & \forall i \in V,~ j \in F_i^\phi \label{eq:mip:fsbf20}\\[\eqnv]
+	& & z_{ij}\in\{0,1\} & & \forall i \in V,~ j \in F_i^\beta \label{eq:mip:fsbf21}\\[\eqnv]
+	& & o_{ik} \geq 0 & & \forall i \in V,~ k \in FS_i  \label{eq:mip:fsbf22}\\[\eqnv]
+	& & w_i \in \{1,2,\ldots,m\} & & \forall i \in V \label{eq:mip:fsbf23}
+\end{IEEEeqnarray}
+
+The objective function (\ref{eq:mip:fsbf1}) minimizes the cycle time
+(as with all programs presented in this chapter), 
+(\ref{eq:mip:fsbf3}--\ref{eq:mip:fsbf16}) define the main constraints
+on this formulation and the last constraints (\ref{eq:mip:fsbf17}--\ref{eq:mip:fsbf23})
+are non-functional defining the domains of our decision variables.
+We now detail the purpose of each of the main constraints.
+
+Constraint (\ref{eq:mip:fsbf3}) ensures that each task is assigned exactly one station,
+(\ref{eq:mip:fsbf4}) encode the station numbers of the variables $w_i$,
+constraints (\ref{eq:mip:fsbf5}) and (\ref{eq:mip:fsbf6}) enforce that
+each task has exactly one follower and one predecessor respectively (in either
+load direction),
+(\ref{eq:mip:fsbf7}) requires that a task can only be the last task of a station
+if it has been assigned to that station,
+constraint (\ref{eq:mip:fsbf8}) ensures that the number of last tasks is at least
+the number of backward setups,
+(\ref{eq:mip:fsbf9}) enforces that each station has at maximum one last task.
+The four inequalities of constraints (\ref{eq:mip:fsbf10}) and (\ref{eq:mip:fsbf11})
+encode a disjunction using a big-$M$ value to ensure that only tasks in the 
+the same station can be a part of the same sequence.
+Knapsack constraint (\ref{eq:mip:fsbf12}) strengthens the formulation by
+requiring all tasks be completed by the cycle time,
+(\ref{eq:mip:fsbf13}) enforces the backward setup times to bound the cycle time below,
+(\ref{eq:mip:fsbf14}) ensures that there are at least $m$ backward setup times,
+constraint (\ref{eq:mip:fsbf15}) requires that the precedence relations are satisfied
+within stations and between stations using the cycle time as a big-$M$ value
+and finally (\ref{eq:mip:fsbf16}) enforces that the forward setup times are satisfied
+in the forward station load of each station.
+
+Both a lower and upper bound on the cycle time is required as input for
+this model, so these are calculated as follows,
+\begin{align}
+	\ul{c} &=\max\left\{\: t_{max}',\:\left\lceil \frac{t_{sum}}{m} \right\rceil \:\right\} \label{eq:mip:cLB}\\
+	\bar{c} &=t_{sum} + \beta_{n,1} + \sum_{i=1}^{n-1} \phi_{i,i+1}, \label{eq:mip:cUB}
+\end{align}
+where $t_{max}'=\max_{i\in V}(t_i+\beta_{ii})$.
+The theoretical lower bound given by (\ref{eq:mip:cLB})
+is the larger value between the maximum possible processing of any singular task
+in a station and the equal fractional distribution of all processing times across 
+all $m$ stations.
+
+We note that the upper bound on the cycle time, given by (\ref{eq:mip:cUB}), need only be the cycle
+time of some feasible solution.
+The precedence graph is numbered topologically,
+thus a precedence-feasible sequencing
+of all tasks within a single station is 1,2,\ldots,n.
+The upper bound on the cycle time is trivially
+the sum of all processing times together with the setup times
+resulting from the above sequencing.
+As this assignment and sequence is valid, the upper bound is feasible.
+
+The number of variables and constraints are both bounded by $\mathcal{O}(n^2)$.
+We note here that this formulation of the \sua{2} requires a number
+of disjunctive constraints, which can have an
+undesirable impact on the ability of MIP solvers to
+handle the problem.
+This is due to MIPs needing to formulate disjunctive
+constraints with a big-$M$ value which leads to weak
+linear relaxations.	
+Constraints (\ref{eq:mip:fsbf10}), (\ref{eq:mip:fsbf11}), 
+(\ref{eq:mip:fsbf15}) and (\ref{eq:mip:fsbf16}) all encode disjunctions.
+
+\section{Second Station-Based Formulation}
+\label{sec:mip:ssbf}
+The next formulation is abbreviated as \ssbf{}
+and in this case the number of 
+variables is bounded by $\mathcal{O}(n^3)$.
+The decision variables in this model are similar
+to \fsbf{2} except for a few differences which
+are presented in Table \ref{sec:mip:ssbf}.
+
+\begin{table}[tbp]
+	\def\arraystretch{1.1}
+	\centering
+	\caption{Decision variables of SSBF-2}
+	\vspace{2mm}
+	\begin{tabular}{lp{0.8\textwidth}}
+		\toprule
+		Variable & Definition \\\midrule\midrule
+		$g_{ijk}$ & 1 iff $i\in V$ is followed directly by task $j \in F_i^\phi$ in the forward station load on station $k\in FS_i$ \\
+		$h_{ijk}$ & 1 iff $i\in V$ is the last task of station $k\in FS_i$ and $j\in F_i^\beta$ is the first \\
+		$r_i$ & ordering variable which represents the priority of task $i\in V$ in a station's sequence of tasks\\
+		\bottomrule
+	\end{tabular}
+	\label{tab:mip:ssbfVars}
+\end{table}
+
+\begin{IEEEeqnarray}{rClCl}
+	\IEEEeqnarraymulticol{3}{l}{\text{\ssbf{2}: Min } c} & \hspace{4mm} & \label{eq:mip:ssbf1}\\[\eqnv]
+	\text{s.t. } & \hspace{1mm} & \IEEEeqnarraymulticol{3}{l}{(\ref{eq:mip:fsbf5}),~(\ref{eq:mip:fsbf6}),~(\ref{eq:mip:fsbf17}),~(\ref{eq:mip:fsbf19}),~(\ref{eq:mip:fsbf23})} \nonumber\\[\eqnv]
+	& & \sum_{j\in FT_k \cap F_i^\phi}g_{ijk} +\sum_{j\in FT_k \cap F_i^\beta} h_{ijk} = x_{ik} & & \forall i \in V,~ k\in FS_i \label{eq:mip:ssbf3}\\[\eqnv]
+	& & \sum_{i\in FT_k \cap P_j^\phi}g_{ijk} +\sum_{i\in FT_k \cap P_j^\beta} h_{ijk} = x_{ik} & & \forall j \in V,~ k\in FS_j \label{eq:mip:ssbf4}\\[\eqnv]
+	& & \sum_{i\in FT_k} \sum_{j\in FT_k \cap F_i^\beta} h_{ijk} = 1 & & \forall k\in K \label{eq:mip:ssbf5}\\[\eqnv]
+	& & (n-|F_i^*|-|P_j^*|)\cdot\left( \sum_{k\in FS_i \cap FS_j} g_{ijk} -1 \right) & & \nonumber\\[\smolEqnv]
+	& & ~~+r_i +1 \leq r_j & & \forall i\in V,~ j\in F_i^\phi \label{eq:mip:ssbf6}\\[\eqnv]
+	& & r_i +1 \leq r_j & & \forall (i,j) \in E \label{eq:mip:ssbf7}\\[\eqnv]
+	& & w_i \leq w_j & & \forall (i,j) \in E \label{eq:mip:ssbf8}\\[\eqnv]
+	& & \sum_{i\in FT_k} t_i \cdot x_{ik} +\sum_{i\in FT_k} \sum_{j\in FT_k \cap F_i^\phi} \phi_{ij} g_{ijk} & &  \nonumber\\[\smolEqnv]
+	& & ~~+\sum_{i\in FT_k} \sum_{j\in FT_k \cap F_i^\beta} \beta_{ij}h_{ijk} \leq c & & \forall k \in K \label{eq:mip:ssbf9}\\[\eqnv]
+	& & \sum_{i\in FT_k \setminus \{j\}} x_{ik} \leq (n-m+1)\cdot(1-h_{ijk}) & & \forall k \in K,~ j\in FT_k \label{eq:mip:ssbf10}\\[\eqnv]
+	& & g_{ijk} \in \{0,1\} & & \forall k \in K,~ i\in FT_k,~ j\in FT_k \cap F_i^\phi \nonumber\\[\smolEqnv]
+	& & & & \label{eq:mip:ssbf11}\\[\eqnv]
+	& & h_{ijk} \in \{0,1\} & & \forall k \in K,~ i\in FT_k,~ j\in FT_k \cap F_i^\beta \nonumber\\[\smolEqnv]
+	& & & & \label{eq:mip:ssbf12}\\[\eqnv]
+	& & |P_i^*|+1 \leq r_i \leq n-|F_i^*| & & \forall i \in V \label{eq:mip:ssbf13}
+\end{IEEEeqnarray}
+
+Constraints (\ref{eq:mip:ssbf3}--\ref{eq:mip:ssbf4}) ensure each task has exactly one
+successor and one predecessor in the cyclic sequence of the assigned station and
+each cycle is forced to contain exactly one backward setup by constraint (\ref{eq:mip:ssbf5}).
+Constraint set (\ref{eq:mip:ssbf6}--\ref{eq:mip:ssbf7}) establish the
+precedence relations between the tasks within each station.
+We note here that (\ref{eq:mip:ssbf6}) is a disjunctive constraint
+and becomes inactive when tasks $i$ and $j$ are assigned
+to different stations, \ie $g_{ijk}=0$.
+Due to this, constraint (\ref{eq:mip:ssbf8}) is added to
+ensure the precedence relations are satisfied between stations.
+A knapsack constraint (\ref{eq:mip:ssbf9}) is again included 
+to strengthen the formulation.
+If a task is its own successor, \ie $h_{jjk}=1$, then
+constraint (\ref{eq:mip:ssbf10}) requires that no other tasks are
+assigned the same station as task $j$.
+Constraints (\ref{eq:mip:ssbf11}--\ref{eq:mip:ssbf13}) are the non-functional
+constraints defining the new decision variables domains.
+
+This model needs to use two disjunctions to achieve
+a correct representation of the problem.
+These disjunctive constraints are
+(\ref{eq:mip:ssbf6}) and (\ref{eq:mip:ssbf10}).
+
+\section{Scheduling-Based Formulation}
+\label{sec:mip:scbf}
+We now demonstrate that the \sua{} can be formulated
+exclusively as a scheduling problem, namely as the 
+\scbf{}.
+Taking this approach means we must again choose
+a new way of encoding the decisions of the problem.
+This leads us to the new decision variable $q_{ij}$
+which takes the value 1 if and only if task $i\in V$ is processed
+before task $j \in F_i^\phi$ along the assembly line.
+Together with $q_{ij}$ we again use decision variables
+$s_i$, $y_{ij}$ and $z_{ij}$ as defined previously.
+Variable $r_i$ is also reused however now its value
+represents the position of task $i$ in the full schedule of
+tasks, rather than within a single cyclic sequence of 
+a station.
+
+\begin{IEEEeqnarray}{rClCl}
+	\IEEEeqnarraymulticol{3}{l}{\text{\scbf{2}: Min } c} & \hspace{4mm} & \label{eq:mip:scbf1}\\[\eqnv]
+	\text{s.t. } & \hspace{1mm} & \IEEEeqnarraymulticol{3}{l}{(\ref{eq:mip:fsbf3}),~(\ref{eq:mip:fsbf4}),~(\ref{eq:mip:fsbf17}),~(\ref{eq:mip:fsbf18}),~(\ref{eq:mip:fsbf20}),~(\ref{eq:mip:fsbf21}),~(\ref{eq:mip:ssbf7}),~(\ref{eq:mip:ssbf13})} \nonumber\\[\smolEqnv]
+	& & q_{ij} + q_{ji} = 1 & & \forall i \in V,~ j \in V\setminus (P_i^*\cup F_i^*) \text{ with } i<j \nonumber\\[\smolEqnv]
+	& & & & \label{eq:mip:scbf2}\\[\eqnv]
+	& & r_i + 1 + (n-|F_i^*|-|P_j^*|) & & \nonumber\\[\smolEqnv]
+	& & ~~\times (q_{ij}-1) \leq r_j & & \forall i \in V,~ j \in V\setminus (P_i^*\cup F_i^*) \text{ with } i\neq j \nonumber\\[\smolEqnv]
+	& & & & \label{eq:mip:scbf3}\\[\eqnv]
+	& & r_j -1 + (n-|F_j^*|-|P_j^*|-1) & & \nonumber\\[\smolEqnv]
+	& & ~~\times (y_{ij}-1) \leq r_i & & \forall i\in V,~ j\in F_i^\phi \label{eq:mip:scbf4}\\[\eqnv]
+	& & y_{ij} \leq q_{ij} & & \forall i\in V,~ j\in F_i^\phi\setminus F_i^* \label{eq:mip:scbf5}\\[\eqnv]
+	& & z_{ji} \leq q_{ij} & & \forall i\in V,~ j\in P_i^\beta\setminus F_i^*\text{ with }i\neq j \label{eq:mip:scbf6}\\[\eqnv]
+	& & s_i + (t_i + \phi_{ij}) & & \nonumber\\[\smolEqnv]
+	& & ~~+(c+\phi_{ij})\cdot(y_{ij}-1)\leq s_j & & \forall i \in V,~ j\in F_i^\phi \label{eq:mip:scbf7}\\[\eqnv]
+	& & \sum_{i\in V}\sum_{j\in F_i^\beta}z_{ij} = m & &  \label{eq:mip:scbf8}\\[\eqnv]
+	& & q_{ij} \in \{0,1\} & & \forall i\in V,~ j\in V\setminus (P_i^* \cup F_i^*) \text{ with } i \neq j \nonumber\\[\smolEqnv]
+	& & & & \label{eq:mip:scbf9}
+\end{IEEEeqnarray}
+
+Constraint (\ref{eq:mip:scbf2}) establishes an ordering
+between two tasks $i$ and $j$ which are not related
+by the precedence graph.
+The transitive relation between the $q_{ij}$ variables
+is enforced by (\ref{eq:mip:scbf3}) together with (\ref{eq:mip:ssbf7}) and (\ref{eq:mip:scbf2}).
+Explicitly, the combination of these constraints guarantee that for
+three tasks $i$, $j$ and $v$, we have the following,
+\[
+	[q_{ij}=1]\wedge[q_{jv}=1] \Rightarrow [q_{iv}=1].
+\]
+Constraints (\ref{eq:mip:scbf4}--\ref{eq:mip:scbf5}) with (\ref{eq:mip:scbf3})
+enforce the following implication,
+\[
+	[y_{ij}] \Rightarrow [r_j=r_i +1].
+\]
+Further to this, the conjunction of these constraints also encodes
+the forward setup times.
+Constraint (\ref{eq:mip:scbf6}) ensures that backward setups 
+are accounted for in the schedule defined by the $q_{ij}$
+variables.
+
+This formulation requires disjunctive constraints 
+(\ref{eq:mip:scbf3}), (\ref{eq:mip:scbf4}) and (\ref{eq:mip:scbf7}).
+
+\section{Valid Inequalities}
+\label{sec:mip:validIneqs}
+In \authciteb{Esmaeilbeigi2016} some
+valid inequalities are proposed to improve the formulations
+of the type-2 version of \sua{}.
+As we mentioned previously, none of these valid inequalities were tested in their
+paper as their concern was with the type-1 version of the problem.
+
+The following two inequalities can be added to both \fsbf{2}
+and \scbf{2}
+\begin{IEEEeqnarray}{lCl}
+	y_{ij} + y_{ji} \leq 1 & \hspace{4mm} & \forall i \in V, j \in (F_i^\phi \cap P_i^\phi) \label{eq:mip:valIneq1}\\[\eqnv]
+	w_{ii} + \sum_{j\in F_i^\beta}w_{ij} + \sum_{j\in P_i^\beta}w_{ji} \leq 1 & \hspace{4mm} & \forall i \in V \label{eq:mip:valIneq2}
+\end{IEEEeqnarray}
+
+Inequality (\ref{eq:mip:valIneq1}) states task $i$ cannot be before and 
+after another task $j$ in the forward station load.
+Equivalently, inequality (\ref{eq:mip:valIneq2}) does the same for
+the backward station load.
+\citeauthor{Esmaeilbeigi2016} note that (\ref{eq:mip:valIneq1})
+dominates (\ref{eq:mip:valIneq2}) and thus only the
+first inequality was tested in the relevant formulations.
+
+Let us denote the total setup time that occurs throughout all stations
+by $S$.
+The idle time of a station is the difference
+between the line's cycle time and the station's workload; let the
+total idle time across all stations be denoted by $I$.
+So the total amount of time used by the assembly line
+can be calculated by summing all processing times with the total
+setup time and the total idle time.
+This results in the following relation $t_{sum}+S+I=m\cdot c$.
+This can be formulated as a valid inequality to tighten the
+linear relaxation of the MIPs as follows
+\begin{IEEEeqnarray}{lCl}
+	t_{sum}+\sum_{i\in V} \sum_{j\in F_i^\phi}\phi_{ij}\cdot y_{ij}+\sum_{i\in V} \sum_{j\in F_i^\beta}\beta_{ij}\cdot z_{ij} \leq m\cdot c. \label{eq:mip:valIneq3}
+\end{IEEEeqnarray}
+Here we interpret the left-hand side of inequality (\ref{eq:mip:valIneq3})
+as a lower bound on the line capacity and the right-hand side
+as the tightest possible upper-bound.
+Once again, this inequality cannot be added to \ssbf{2} due to
+(\ref{eq:mip:valIneq3}) requiring the decision variables $y_{ij}$
+and $z_{ij}$.
+
+\section{Summary}
+\label{sec:mip:summary}
+% The three mixed-integer programs presented in this chapter
+% have been untested by the literature.
+When testing the viability of a Benders decomposition
+approach to a problem,
+it is common practice to compare the computational results against
+the best known mixed-integer programming formulation of the full problem.
+Although, due to the \sua{2} being relatively under-studied,
+no computational results of an exact solution
+approach are available.
+As such, we will test the MIPs presented here in order to receive benchmark results.
+These results will allow us to judge the quality of our Benders decomposition method,
+which will be detailed in the next chapter.
+
