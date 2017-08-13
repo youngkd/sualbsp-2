@@ -402,38 +402,6 @@ is similarly contained within $\mathcal{C}_{iii}$.
 Thus combining these infer cuts will not lead to a
 substantial reduction in runtime.
 
-% \begin{table}[tpb]
-% 	\begin{adjustwidth}{-.9in}{-.9in}
-% 	\caption{Benders cutting strategies compared on classes 1 and 2}
-% 	\centering
-% 	\vspace{2mm}
-% 	\begin{tabular}{ccrrrrrrrrrrr}
-% 		\toprule
-% 		Cuts & Class & \#Nodes & Iters. & \#Cuts & Cuts & \%Gap & \#No sol. & \#Opt. & \%Opt. & Runtime(s) \\\midrule\midrule
-% 		$i$ 			& 1 & 4,718 & 18 & 35 & [0,\:0,\:35,\:0,\:0,\:0] & 317.78 & 0 & 108/108 & 450.00 & 5.04 & 0.66 & 5.75 \\
-% 						& 2 & 1,437,019 & 103 & 403 & [0,\:0,\:403,\:0,\:0,\:0] & 665.11 & 1 & 35/112 & 218.75 & 1231.88 & 137.11 & 1369.40 \\\midrule
-% 		$ii$ 			& 1 & 2,845 & 15 & 28 & [0,\:0,\:0,\:28,\:0,\:0] & 317.78 & 0 & 108/108 & 450.00 & 3.55 & 0.49 & 4.09 \\
-% 						& 2 & 1,489,391 & 96 & 383 & [0,\:0,\:0,\:383,\:0,\:0] & 692.04 & 1 & 32/112 & 200.00 & 1146.54 & 213.58 & 1360.52 \\\midrule
-% 		$iii$ 			& 1 & 170 & 4 & 8 & [0,\:0,\:0,\:0,\:8,\:0] & 317.37 & 0 & 108/108 & 450.00 & 0.95 & 0.07 & 1.07 \\
-% 						& 2 & 1,145,053 & 44 & 184 & [0,\:0,\:0,\:0,\:184,\:0] & 683.09 & 1 & 65/112 & 406.25 & 812.48 & 185.57 & 998.46 \\\midrule
-% 		$gb,i$ 			& 1 & 3,790 & 16 & 32 & [0,\:1,\:31,\:0,\:0,\:0] & 15.76 & 0 & 108/108 & 450.00 & 2.31 & 0.58 & 2.93 \\
-% 						& 2 & 1,522,487 & 99 & 396 & [0,\:3,\:392,\:0,\:0,\:0] & 11.63 & 1 & 35/112 & 218.75 & 1177.86 & 161.47 & 1339.74 \\\midrule
-% 		$gb,\:ii$ 		& 1 & 2,064 & 12 & 26 & [0,\:1,\:0,\:25,\:0,\:0] & 16.01 & 0 & 108/108 & 450.00 & 1.45 & 0.38 & 1.88 \\
-% 						& 2 & 1,430,956 & 99 & 399 & [0,\:3,\:0,\:396,\:0,\:0] & 10.79 & 1 & 36/112 & 225.00 & 1136.87 & 211.25 & 1348.53 \\\midrule
-% 		$gb,\:iii$ 		& 1 & 128 & 3 & 9 & [0,\:1,\:0,\:0,\:7,\:0] & 16.09 & 0 & 108/108 & 450.00 & 0.30 & 0.06 & 0.41 \\
-% 						& 2 & 1,024,879 & 47 & 196 & [0,\:3,\:0,\:0,\:192,\:0] & 8.42 & 1 & 68/112 & 400.00 & 786.47 & 173.05 & 959.93 \\\midrule
-% 		$gb,\:i,\:lc$ 	& 1 & 766 & 17 & 34 & [0,\:1,\:14,\:0,\:0,\:19] & 15.80 & 0 & 108/108 & 450.00 & 2.01 & 0.54 & 2.60 \\
-% 						& 2 & 918,423 & 112 & 439 & [0,\:3,\:209,\:0,\:0,\:227] & 11.38 & 1 & 37/112 & 231.25 & 1175.16 & 142.86 & 1318.43 \\\midrule
-% 		$gb,\:ii,\:lc$ 	& 1 & 896 & 17 & 34 & [0,\:1,\:0,\:13,\:0,\:20] & 15.88 & 0 & 108/108 & 450.00 & 2.15 & 0.55 & 2.76 \\
-% 						& 2 & 964,875 & 114 & 443 & [0,\:3,\:0,\:204,\:0,\:236] & 11.33 & 1 & 35/112 & 218.75 & 1199.93 & 141.94 & 1342.29 \\\midrule
-% 		$gb,\:iii,\:lc$ & & 128 & 3 & 9 & [0,\:1,\:0,\:0,\:7,\:0] & 16.09 & 0 & 108/108 & 450.00 & 0.30 & 0.06 & 0.41 \\
-% 						& 2 & 1,024,879 & 47 & 196 & [0,\:3,\:0,\:0,\:192,\:0] & 8.42 & 1 & 65/112 & 400.00 & 786.47 & 173.05 & 959.93 \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\label{tab:exp:resultsCuts}
-% 	\end{adjustwidth}
-% \end{table}
-
 \section{CP Sub-Problem}
 \label{sec:exp:cp}
 The CP solver \chuffed provides the
@@ -452,20 +420,9 @@ only average the time used by the CP model,
 Similarly, this also applies to the average number of nodes
 explored by the CP sub-problems..
 
-% \todo{once the best is found we will use this procedure for all
-% remaining experiments (unless stated otherwise, in the
-% case of testing the upper-bound cuts with the CP sub-problem).}
-
-% global upper bound:
-
 % The upper bound cut reduces the space complexity of the sub-problems
 % very helpful for cp solver whose difficultly is very closely
 % related to the inference that can be done on the finite domains. 
-
-% \todo{mention how the formulation performed when
-% global upper bound was removed. ... badly. why?
-% because cp could not handle such large domains of the
-% variables.}
 
 \subsection{Model Formulation}
 \label{sec:exp:cpForm}
@@ -504,26 +461,6 @@ unless stated otherwise.
 	\end{tabular}
 	\label{tab:exp:resultsCPmodel}
 \end{table}
-
-% \begin{table}[tpb]
-% 	\caption{Input parameters of CP}
-% 	\centering
-% 	\vspace{2mm}
-% 	\begin{tabular}{cccccrrrrrrr}
-% 		\toprule
-% 		\multicolumn{3}{c}{Parameters}  &  &  &  &  &  &  &   \\\cmidrule(rl){1-3}
-% 		{\tt -f} & {\tt tt} & {\tt ttef} \#Nodes & \#Its. & $|\mathcal{C}|$ & \%Gap & \#No.s. & \%Opt. & Rt.(s) \\\midrule\midrule
-% 		 &  &  & 1,522k & 99 & 396 & 11.63 & 1 & 31.25 & 1339.7 \\
-% 		 &  &  & 1,430k & 99 & 399 & 10.79 & 1 & 32.14 & 1348.5 \\
-% 		 &  &  & 1,024k & 47 & 196 & 8.42 & 1 & 60.71 & 959.9 \\\midrule
-% 		 &  &  & 918k & 112 & 439 & 11.38 & 1 & 33.04 & 1318.4 \\
-% 		 &  &  & 964k & 114 & 443 & 11.33 & 1 & 31.25 & 1342.3 \\
-% 		 &  &  & 898k & 68 & 225 & 9.03 & 1 & 58.04 & 956.8 \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\label{tab:exp:resultsCPparameters}
-% \end{table}
-
 
 \subsection{Search Strategy}
 \label{sec:exp:cpSearch}

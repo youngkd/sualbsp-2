@@ -92,29 +92,6 @@ the partitions of the problem.
 	\label{fig:bend:highLevelBend}
 \end{figure}
 
-% \begin{table}[tpb]
-% 	\def\arraystretch{1.1}
-% 	\centering
-% 	\caption{cp vs. mip}
-% 	\vspace{2mm}
-% 	\begin{tabular}{lp{0.38\textwidth}p{0.38\textwidth}}
-% 		\toprule
-% 		& CP & MIP \\\midrule
-% 		variables & finite domain & binary, integer, continuous \\
-% 		constraints & symbolic $(\Rightarrow,\:\cumu,\:\ldots)$ & linear, algebraic $(+,\:*,\:=,\:\leq,\:\ldots)$ \\
-% 		inference & propagation & LP relaxation \\
-% 		strength & local feasibility & global optimality \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\label{tab:intro:cpvip}
-% \end{table}
-
-% \authciteb{Hooker2003} --- a lot of good motivation for employ logic-based
-% Benders.
-
-% \authciteb{Jain2001} \authciteb{Li2009a} --- motivating the use of hybridizing the solution
-% methodology.
-
 \section{Types of Sub-Problems}
 \label{sec:bend:SPtype}
 When using logic-based Benders decomposition, there are two general types 
@@ -234,43 +211,6 @@ are omitted from the RMP and as a result the total setup
 cost of each station is taken as zero.
 % The estimated setup cost of station $k$ is decided by
 % variable $\xi_k$.
-
-% \begin{table}[tbp]
-% 	\def\arraystretch{1.1}
-% 	\centering
-% 	\caption{Decision variables of the Relaxed Master Problem at iteration $\mu$}
-% 	\vspace{2mm}
-% 	\begin{tabular}{lp{0.8\textwidth}}
-% 		\toprule
-% 		Variable & Definition \\\midrule
-% 		$c^\mu$ & cycle time of the assembly line, continuous\\
-% 		$x_{ik}^\mu$ & 1 iff task $i \in V$ is assigned to station $k \in FS_i$ \\
-% 		$y_{ijk}$ & 1 iff task $i \in V$ is followed directly by task $j \in F_i^\phi$ in the forward station load of station $k \in FS_i$ \\
-% 		$z_{ijk}$ & 1 iff task $i \in V$ is the last task completed and task $j \in F_i^\beta$ is the first in station $k\in FS_i$ \\
-% 		$\xi_{k}$ & Lower bound on the total setup time of station $k\in K$, continuous \\ 
-% 		\bottomrule
-% 	\end{tabular}
-% 	\label{tab:bend:RMPvars}
-% \end{table}
-
-% \begin{IEEEeqnarray}{rClCl}
-% 	\IEEEeqnarraymulticol{3}{l}{\text{\rmp{\mu}: Min } c^\mu} & \hspace{4mm} & \label{eq:bend:rmp1}\\[\eqnv]
-% 	\text{s.t. } & \hspace{4mm} & \sum_{k\in FS_i} x_{ik}^\mu = 1 & & \forall i \in V \label{eq:bend:rmp2}\\[\eqnv]
-% 	& & \sum_{j\in F_i^\phi} y_{ijk} + \sum_{j\in F_i^\beta}z_{ijk} = x_{ik}^\mu & & \forall i \in V,~ k\in FS_i \label{eq:bend:rmp3}\\[\eqnv]
-% 	& & \sum_{i\in P_j^\phi} y_{ijk} + \sum_{i\in P_j^\beta}z_{ijk} = x_{jk}^\mu & & \forall j \in V,~ k\in FS_j \label{eq:bend:rmp4}\\[\eqnv]
-% 	& & \sum_{i \in FT_k}\sum_{j\in F_i^\beta} z_{ijk} \geq 1 & & \forall k\in K \label{eq:bend:rmp5}\\[\eqnv]
-% 	& & \sum_{k \in FS_i} k\cdot x_{ik}^\mu \leq \sum_{k \in FS_j} k\cdot x_{jk}^\mu & & \forall (i,j) \in E \label{eq:bend:rmp6}\\[\eqnv]
-% 	& & \sum_{i \in V} t_i \cdot x_{ik}^\mu + \xi_{k} \leq c^\mu & & \forall k \in K \label{eq:bend:rmp7}\\[\eqnv]
-% 	& & \xi_k = \sum_{i \in FT_k} \left( \sum_{j \in F_i^\phi} \phi_{ij}\cdot y_{ijk} + \sum_{j \in F_i^\beta} \beta_{ij}\cdot z_{ijk} \right) & & \forall k \in K \label{eq:bend:rmp8}\\[\eqnv]\
-% 	& & C(i) & & i \in \{1, 2,\ldots,\mu-1 \} \label{eq:bend:rmp9}\\[\eqnv]
-% 	& & \ul{c}^\mu\leq c^\mu \leq \bar{c}^\mu & &  \label{eq:bend:rmp10}\\[\eqnv]
-% 	& & 0 \leq \xi_k \leq \bar{c} & & \forall k \in K \label{eq:bend:rmp11}\\[\eqnv]
-% 	& & x_{ik}^\mu\in\{0,1\} & & \forall i \in V,~ k \in FS_i \label{eq:bend:rmp12}\\[\eqnv]
-% 	& & y_{ijk}\in\{0,1\} & & \forall i \in V,~ j \in F_i^\phi,~ k \in FS_i \nonumber\\[\smolEqnv]
-% 	& & & & \label{eq:bend:rmp13}\\[\eqnv]
-% 	& & z_{ijk}\in\{0,1\} & & \forall i \in V,~ j \in F_i^\beta,~ k \in FS_i \nonumber\\[\smolEqnv]
-% 	& & & & \label{eq:bend:rmp14}
-% \end{IEEEeqnarray}
 
 \begin{IEEEeqnarray}{rClCl}
 	\IEEEeqnarraymulticol{3}{l}{\text{\rmp{\mu}: Min } c^\mu} & \hspace{4mm} & \label{eq:bend:rmp1}\\[\eqnv]
