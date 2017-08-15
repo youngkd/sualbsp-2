@@ -1105,7 +1105,7 @@ class Solver:
 			# optimise the master using callbacks
 			self.model.optimize(callback_sub_tour_elimination)
 		else:
-			self.model.optimize()
+			self.model.optimize(master_callback)
 
 	#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 	# BENDERS CUTS DEFINITION
@@ -1891,6 +1891,23 @@ class Solver:
 			print(self.numInfAssCutsSmart)
 			print(self.numInfAssCutsSmartest)
 			print(self.numLogicCuts)
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# BENDERS CALLBACK FUNCTION
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+def master_callback(model, where):
+		# callback function to return to previously explored master B&B tree
+		# adds the Benders cuts as lazy constraints
+
+		# begin callback when at a new node
+		if where == GRB.Callback.MIPNODE:
+			what = s.model.cbGet(where)
+			# check if new node is optimal
+			if what == GRB.status.OPTIMAL:
+				# add Benders cuts
+				print('apple') #temp
+
 
 # Script to create instance class, run the solver and output the solution
 if __name__ == '__main__':
