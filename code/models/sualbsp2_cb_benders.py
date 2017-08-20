@@ -177,7 +177,7 @@ class Station:
 			# assuming tasks are completed in input order
 			naiveFeasibleOrderingCost = sum( [ self.inst.forwSU[i][j] 
 				   for (i,j) in pairedTasks ] ) + self.inst.backSU[sortedTasks[-1]][sortedTasks[0]]
-										
+
 			# together these give a naive feaible maximum
 			self.naiveLoadUB = sumOfProcList + naiveFeasibleOrderingCost
 
@@ -261,7 +261,7 @@ class Station:
 	def init_MIP_vars(self):
 		self.load = self.model.addVar(ub=self.naiveLoadUB,
 										obj=0.0,
-										vtype=GRB.CONTINUOUS,
+										vtype=GRB.INTEGER,
 										name='l')
 
 		# Initialise y variables: Forward Sequencing
@@ -279,7 +279,7 @@ class Station:
 		# Initialise s variables: Start times
 		self.ss = self.model.addVars(self.tasks,
 									 ub=self.naiveLoadUB, # ub=self.curCycleTime,
-									 vtype=GRB.CONTINUOUS,
+									 vtype=GRB.INTEGER,
 									 name='s')
 
 		self.model.update()
@@ -882,6 +882,10 @@ class Solver:
 		self.optimisation_times.append(self.init_time)
 		if not args.very_quiet:
 			print('complete ({:.3f}s).'.format(self.init_time))
+		# set PreCrush to 1 to we can add lazy constaints in callbacks
+		# self.model.setParam('PreCrush', 1)
+		# set LazyConstraints to 1 to we can add lazy constaints in callbacks
+		self.model.setParam('LazyConstraints', 1)
 
 	def initialise_cut_sets(self):
 		if USE_NOGOODS:
@@ -937,7 +941,7 @@ class Solver:
 		self.cycleTime = self.model.addVar(lb=self.inst.minCycleTime, 
 										   ub=self.inst.maxCycleTime,
 										   obj=0.0,
-										   vtype=GRB.CONTINUOUS,
+										   vtype=GRB.INTEGER,
 										   name='c')
 
 		# Initialise x variables: Station assignment
@@ -963,7 +967,7 @@ class Solver:
 		# Initialise xi variables: Sub-sequence Setup Lower Bound
 		self.xis = self.model.addVars(self.inst.stations,
 									  ub=self.inst.maxCycleTime,
-									  vtype=GRB.CONTINUOUS,
+									  vtype=GRB.INTEGER,
 									  name='xi')
 
 		self.model.update()
@@ -1046,7 +1050,7 @@ class Solver:
 		self.cycleTime = self.model.addVar(lb=self.inst.minCycleTime, 
 										   ub=self.inst.maxCycleTime,
 										   obj=0.0,
-										   vtype=GRB.CONTINUOUS,
+										   vtype=GRB.INTEGER,
 										   name='c')
 
 		# Initialise x variables: Station assignment
@@ -1058,9 +1062,9 @@ class Solver:
 		self.model.update()
 
 	def reinitialise_master_ass(self, time_remaining):
-		if not WARM_START:
-			# remove previous RMP solution as the warm-starting solution
-			self.model.reset()
+		# if not WARM_START:
+		# 	# remove previous RMP solution as the warm-starting solution
+		# 	self.model.reset()
 		# limit the current relaxed master's runtime
 		self.model.setParam('TimeLimit', time_remaining)
 
@@ -1105,7 +1109,7 @@ class Solver:
 			# optimise the master using callbacks
 			self.model.optimize(callback_sub_tour_elimination)
 		else:
-			self.model.optimize()
+			self.model.optimize(master_callback)
 
 	#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 	# BENDERS CUTS DEFINITION
@@ -1133,8 +1137,7 @@ class Solver:
 		if not args.very_quiet:
 			print('\n   CUT: Logic cut #{} added (infeas. assignment):'.format(self.numLogicCuts))
 			print('  \t[Station {}, tasks = {}]'.format(k,tasks))
-		self.model.addConstr(sum([ (1 - self.xs[i,k]) for i in tasks ]) >= 1,
-							 'LogicCut[{}]'.format(self.numLogicCuts))
+		self.model.cbLazy(sum([ (1 - self.xs[i,k]) for i in tasks ]) >= 1)
 		self.logicCuts.append({'stationNum':k, 
 							   'tasks':tasks, 
 							   'cycleTime':self.bestCycleTimeUB})
@@ -1146,9 +1149,8 @@ class Solver:
 		if not args.very_quiet:
 			print('   CUT: Infer cut #{} added (simple):'.format(self.numInfAssCutsSimple))
 			print('  \t[Station {}: tasks = {} implies c >= {}]'.format(k,tasks,round(self.curStationLoad[k])))
-		self.model.addConstr(self.cycleTime >=   self.curStationLoad[k] 
-											   - self.bigM*(count - sum([ self.xs[i,k] for i in tasks ])),
-							 'InferCut[{}]'.format(self.numInfAssCutsSimple))
+		self.model.cbLazy(self.cycleTime >=   self.curStationLoad[k] 
+											   - self.bigM*(count - sum([ self.xs[i,k] for i in tasks ])))
 		self.infAssCutsSimple.append({'stationNum':k, 
 									  'tasks':tasks, 
 									  'cycleTime':self.curStationLoad[k]})
@@ -1227,10 +1229,9 @@ class Solver:
 		if not args.very_quiet:
 			print('   CUT: Infer cut #{} added (smart):'.format(self.numInfAssCutsSmart))
 			print('  \t[Station {}: tasks = {} implies c >= {}]'.format(k,tasks,round(self.curStationLoad[k])))
-		self.model.addConstr(self.cycleTime >=   self.curStationLoad[k] 
+		self.model.cbLazy(self.cycleTime >=   self.curStationLoad[k] 
 											   - sum([ burdenUB[i]*(1 - self.xs[i,k])
-														for i in tasks ]),
-							 'InferCut2[{}]'.format(self.numInfAssCutsSmart))
+														for i in tasks ]))
 		self.infAssCutsSmart.append({'stationNum':k, 
 									  'tasks':tasks, 
 									  'cycleTime':self.curStationLoad[k]})
@@ -1299,12 +1300,11 @@ class Solver:
 		if not args.very_quiet:
 			print('   CUT: Infer cut #{} added (smartest):'.format(self.numInfAssCutsSmartest))
 			print('  \t[Station {}: tasks = {} implies c >= {}]'.format(k,tasks,round(self.curStationLoad[k])))
-		self.model.addConstr(self.cycleTime >=   self.curStationLoad[k] 
+		self.model.cbLazy(self.cycleTime >=   self.curStationLoad[k] 
 											   - sum([ burdenUB[i]*(1 - self.xs[i,k])
 											   			for i in tasks ])
 											   + sum([ burdenLB[i]*self.xs[i,k]
-											   			for i in otherTasks ]),
-							 'InferCut3[{}]'.format(self.numInfAssCutsSmartest))
+											   			for i in otherTasks ]))
 		self.infAssCutsSmartest.append({'stationNum':k, 
 										'tasks':tasks, 
 										'cycleTime':self.curStationLoad[k]})
@@ -1329,7 +1329,7 @@ class Solver:
 		# 	self.bestCycleTimeLB = cycleTimeLB
 		# 	self.add_global_lower_bound()
 		# update the model with the changed constraints
-		self.model.update()
+		# self.model.update()
 
 	def add_global_upper_bound(self):
 		# global bound
@@ -1337,7 +1337,8 @@ class Solver:
 			print('\n BOUND: Global UB #{} added: [c <= {}]'.format(self.numGlobalUB,
 																	self.bestCycleTimeUB))
 		# change the rhs
-		self.consUB.setAttr('rhs', self.bestCycleTimeUB)
+		# self.consUB.setAttr('rhs', self.bestCycleTimeUB)
+		self.model.cbLazy(self.cycleTime <= self.bestCycleTimeUB)
 
 		self.globalUB.append(self.bestCycleTimeUB)
 		self.numGlobalUB += 1
@@ -1408,7 +1409,7 @@ class Solver:
 				print('\t\tGap: \t{:.2f} %\n'.format(self.gap[self.bendersIter]))
 
 			# !~~~~~ this should probably check if gap <= 0 as we might skip a cycle time value right?
-			# if gap found is 0 then we have already found a feasible solution tp the sub-problems
+			# if gap found is 0 then we have already found a feasible solution to the sub-problems
 			if self.gap[self.bendersIter] == 0:
 				# ignore the current master solution and take the old one instead
 				# pdb.set_trace()
@@ -1493,6 +1494,49 @@ class Solver:
 					allowGlobalUB = False
 
 			doneBenders = True
+
+	def benders_optimise_with_master_callbacks(self, benders_gap=0.01):
+		self.startBenders = time.time()
+		self.time_limit_exceeded = False
+		self.master_timed_out = False
+		self.bendersIter = 0
+		self.doneBenders = False
+		self.gap = []
+		self.stations = [None for k in self.inst.stations]
+		self.taskAssignment = [None for k in self.inst.stations]
+		self.stationSatisfiesCurCycleTime = [True for k in self.inst.stations]
+		self.stationFeasible = [True for k in self.inst.stations]
+		self.curStationLoad = [None for k in self.inst.stations]
+		self.startTimes = [None for k in self.inst.stations]
+
+		self.allowGlobalUB = True
+
+		# define the time used up until the first relaxed master
+		self.RMP_time_used = round(time.time()-self.startBenders,4)
+
+		if not args.very_quiet:
+			print('\n{:.1f}/{} seconds elapsed'.format(self.RMP_time_used,TIMELIMIT))
+			print('===============================')
+			print('Master %d: ' %(self.bendersIter), end='', flush=True)
+
+		# pdb.set_trace()
+		# begin Benders iteration
+		self.solve_master_problem_with_callbacks(TIMELIMIT - self.RMP_time_used)
+		# pdb.set_trace()
+
+		if self.model.status == GRB.TIME_LIMIT:
+			self.curCycleTime = self.inst.maxCycleTime
+
+		self.statsMasterNodes = np.append(self.statsMasterNodes, int(self.model.nodecount))
+
+		self.benders_time = time.time() - self.startBenders
+
+	def solve_master_problem_with_callbacks(self, timeRemaining):
+		# add updated timelimit
+		self.reinitialise_master_ass(timeRemaining)
+
+		self.startMaster = time.time()
+		self.optimise_ass()
 
 	def solve_master_problem(self, timeRemaining):
 		# add updated timelimit
@@ -1583,8 +1627,8 @@ class Solver:
 		logicallyInfeasibleAssignment = False
 		if SUB_PROBLEM_SOLVER == 'mip':
 			self.stations[k].initialise_MIP(TIMELIMIT-self.SP_time_used)
-			if args.quiet:
-				self.stations[k].model.setParam('OutputFlag', 0)
+			# if args.quiet:
+			# 	self.stations[k].model.setParam('OutputFlag', 0)
 			startSequencing = time.time()
 			self.stations[k].solve_MIP()
 			# record station sub-problem optimisation time
@@ -1892,6 +1936,106 @@ class Solver:
 			print(self.numInfAssCutsSmartest)
 			print(self.numLogicCuts)
 
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# BENDERS CALLBACK FUNCTIONALITY
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+def master_callback(model, where):
+	# callback function to return to previously explored master B&B tree
+	# adds the Benders cuts as lazy constraints
+
+	# begin callback when a new incumbent MIP sol is found
+	if where == GRB.Callback.MIPSOL:
+		# status = model.cbGet(GRB.Callback.MIPNODE_STATUS)
+
+		# if status == GRB.Status.OPTIMAL:
+
+		curMIPobj = round(s.model.cbGet(GRB.Callback.MIPSOL_OBJ), 6)
+		curMIPLB = round(s.model.cbGet(GRB.Callback.MIPSOL_OBJBND), 6)
+		curMIPGap = 100*(curMIPobj - curMIPLB)/curMIPLB
+		# pdb.set_trace()
+
+		# move to sub problems once RMP is optimal (ie gap==0)
+		if curMIPGap == 0.0:
+
+			# store current RMP stats
+			store_current_RMP_stats()
+			pdb.set_trace()
+			if time.time() - s.startBenders > TIMELIMIT:
+				s.master_timed_out = True
+				s.doneBenders = True
+				s.time_limit_exceeded = True
+
+			if not args.very_quiet:
+				print('\tCycle: \t{}'.format(round(s.curCycleTime)))
+				print('\t\tUB: \t{}'.format(s.bestCycleTimeUB))
+				print('\t\tGap: \t{:.2f} %\n'.format(s.gap[s.bendersIter]))
+
+			# if gap found is 0 then we have already found a feasible solution to the sub-problems
+			if s.gap[s.bendersIter] == 0:
+				# ignore the current master solution and take the old one instead
+				for k in s.inst.stations:
+					s.taskAssignment[k] = s.all_solutions_ever[k][s.mostRecentUpperBoundIter]['tasks']
+					s.all_solutions_ever[k].append({'tasks': s.taskAssignment[k]})
+			else:
+				# store current assignment
+				if s.bendersIter > 0:
+					s.statsSubProblemNodes.append(np.empty([0],dtype=int))
+				for k in s.inst.stations:
+					s.taskAssignment[k] = { i for i in s.inst.tasks if s.model.cbGetSolution(s.xs[i,k]) > 0.5 }
+					s.all_solutions_ever[k].append({'tasks': s.taskAssignment[k]})
+
+			# solve each sub-problem, adding cuts to master
+			iterate_over_stations()
+
+			if not False in s.stationFeasible:
+				s.mostRecentFeasibleCycleTime = round(max(s.curStationLoad),4)
+
+			# pdb.set_trace()
+			# stopping condition: continuing until all sub-problem solutions <= master solution
+			if False in s.stationSatisfiesCurCycleTime or False in s.stationFeasible:
+				# add cuts and iterate if we arent done
+				if USE_GLOBAL_BOUNDS:
+					s.add_global_bounds(s.allowGlobalUB)
+				s.bendersIter += 1
+			else:
+				# s.debug_final_result()
+				# pdb.set_trace()
+				s.doneBenders = True
+			# pdb.set_trace()
+
+def store_current_RMP_stats():
+	s.master_times.append(time.time() - s.startMaster)
+	s.optimisation_times.append(s.master_times[-1])
+
+	s.curCycleTime = round(s.model.cbGetSolution(s.cycleTime),4)
+	# s.statsMasterNodes = np.append(s.statsMasterNodes, int(s.model.nodecount))
+
+	s.gap.append(round(float((s.bestCycleTimeUB - s.curCycleTime)/s.curCycleTime)*100,4))
+
+def iterate_over_stations():
+	for k in s.inst.stations:
+		if not args.very_quiet:
+			print(' Station %d' %(k), end='', flush=True)
+
+		# define the time used up until starting this sub-problem
+		s.SP_time_used = round(time.time() - s.startBenders,4)
+		# check if we are out of time before starting each sub-problem
+		if s.SP_time_used > TIMELIMIT:
+			s.doneBenders = True
+			s.time_limit_exceeded = True
+			break
+
+		# solve the current station's sub-problem
+		result = s.solve_sub_problem(k)
+		# check if time-limit is exceeded
+		if s.time_limit_exceeded:
+			doneBenders = True
+			break
+
+		# if we have already processed ths assignment before move onto next sub problem
+		if result == True:
+			s.allowGlobalUB = False
+
 # Script to create instance class, run the solver and output the solution
 if __name__ == '__main__':
 	# start total runtime timer
@@ -1921,10 +2065,12 @@ if __name__ == '__main__':
 	# create Solver for given instance and optimise it
 	s = Solver(inst)
 
-	if SUB_PROBLEM_TYPE == 'opt':
-		s.benders_optimise_with_optimality_sub_problems()
-	elif SUB_PROBLEM_TYPE == 'feas':
-		s.benders_optimise_with_feasibility_sub_problems()
+	s.benders_optimise_with_master_callbacks()
+
+	# if SUB_PROBLEM_TYPE == 'opt':
+	# 	s.benders_optimise_with_optimality_sub_problems()
+	# elif SUB_PROBLEM_TYPE == 'feas':
+	# 	s.benders_optimise_with_feasibility_sub_problems()
 
 	# store output
 	s.check_for_feasibility_and_optimality()
