@@ -225,10 +225,10 @@ the largest workload among all stations
 		\begin{tabular}{lllll}
 			\toprule
 			$\phi_{ij}$ & $T_1$ & $T_2$ & $T_3$ & $T_4$ \\\midrule
-			$T_1$ & -- & 3 & 3 & 3 \\
-			$T_2$ & -- & -- & 2 & 3 \\
+			$T_1$ & -- & 5 & 5 & 5 \\
+			$T_2$ & -- & -- & 2 & 5 \\
 			$T_3$ & -- & -- & -- & 1 \\
-			$T_4$ & -- & -- & 2 & -- \\
+			$T_4$ & -- & -- & 5 & -- \\
 			\bottomrule
 		\end{tabular}
 	\end{minipage}
@@ -239,9 +239,9 @@ the largest workload among all stations
 			\toprule
 			$\beta_{ij}$ & $T_1$ & $T_2$ & $T_3$ & $T_4$ \\\midrule
 			$T_1$ & 0 & -- & -- & -- \\
-			$T_2$ & 3 & 0 & -- & -- \\
-			$T_3$ & 3 & 5 & 0 & 3 \\
-			$T_4$ & 3 & 3 & 1 & 0 \\
+			$T_2$ & 5 & 0 & -- & -- \\
+			$T_3$ & 5 & 5 & 0 & 5 \\
+			$T_4$ & 5 & 5 & 1 & 0 \\
 			\bottomrule
 		\end{tabular}
 	\end{minipage}
@@ -433,21 +433,21 @@ the largest workload among all stations
 
 
 %------------------------------------------------
-\begin{frame}
-\frametitle{Benders Decomposition: Ingredients}
-\begin{itemize}
-	\item 3 main ingredients:\vspace{2mm}\pause
-	\begin{enumerate}
-		\item Relaxed master problem (RMP) formulation \vspace{2mm}\pause
-		\item Sub-problem (SP) formulation \vspace{2mm}\pause
-		\item Benders cuts~$\Rightarrow$ How these problems communicate\vspace{3mm}\pause
-		% \begin{itemize}
-		% 	\item Better communication $\Rightarrow$ 
-		% \end{itemize}
-	\end{enumerate}
-	\item Logic-based Benders decompositon allows lots of flexibility in our formulations
-\end{itemize}
-\end{frame}
+% \begin{frame}
+% \frametitle{Benders Decomposition: Ingredients}
+% \begin{itemize}
+% 	\item 3 main ingredients:\vspace{2mm}\pause
+% 	\begin{enumerate}
+% 		\item Relaxed master problem (RMP) formulation \vspace{2mm}\pause
+% 		\item Sub-problem (SP) formulation \vspace{2mm}\pause
+% 		\item Benders cuts~$\Rightarrow$ How these problems communicate\vspace{3mm}\pause
+% 		% \begin{itemize}
+% 		% 	\item Better communication $\Rightarrow$ 
+% 		% \end{itemize}
+% 	\end{enumerate}
+% 	\item Logic-based Benders decompositon allows lots of flexibility in our formulations
+% \end{itemize}
+% \end{frame}
 
 %------------------------------------------------
 \begin{frame}
@@ -458,19 +458,16 @@ the largest workload among all stations
 	\begin{tabular}{p{0.45\textwidth}p{0.45\textwidth}}
 		\multicolumn{2}{l}{Separate decisions of the Assembly Line Problem:}\\[3mm]\pause
 		{\color{red} Primary} & {\color{red} Secondary}\\[2mm]
-		Assignment of tasks to stations & Sequencing of tasks within each station\pause\\[2mm]
-		Master problem & Sub-problem\pause
+		Assignment of tasks to stations & Sequencing of tasks within each station
 	\end{tabular}
 \end{table}
 
 \begin{figure}
 	\centering
 	\only<1>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-x.eps}}%
-	\only<2>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-x.eps}}%
-	\only<3>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-x.eps}}%
-	\only<4>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-1.eps}}%
-	\only<5>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-2.eps}}%
-	\only<6>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-3.eps}}%
+	\only<2>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-1.eps}}%
+	\only<3>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-2.eps}}%
+	\only<4>{\includegraphics[width=0.8\textwidth]{images/ourBendersHighestLevel-3.eps}}%
 \end{figure}
 
 
@@ -614,8 +611,8 @@ Assignment problem $\Rightarrow$ Formulate a MIP, solve with Gurobi\pause
 	\end{itemize}
 	\item Compositional searches\vspace{1mm}
 	\begin{itemize}
-		\item Sequential: {\tt seq\_search}\vspace{1mm}\pause
-		\item {\color{red} new!} Priority: {\tt priority\_search}
+		\item Sequential: {\tt seq\_search}\vspace{1mm}
+		\item Priority: {\tt priority\_search}
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -680,7 +677,7 @@ Inference cut \#3 (smartest):
 \begin{frame}
 \frametitle{Benders Results: Sub-Problem Formulations}
 \begin{itemize}
-	\item Medium sized instances\vspace{1mm}
+	\item Instances with 25-30 tasks\vspace{1mm}
 	\item Time limit: 30 minutes on each instance
 \end{itemize}
 \begin{table}

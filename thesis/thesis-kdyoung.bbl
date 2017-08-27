@@ -1,0 +1,616 @@
+\begin{thebibliography}{66}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aggoun and Beldiceanu(1993)]{Aggoun1993}
+Abderrahmane Aggoun and Nicolas Beldiceanu.
+\newblock Extending chip in order to solve complex scheduling and placement
+  problems.
+\newblock \emph{Mathematical and Computer Modelling}, 17\penalty0 (7):\penalty0
+  57 -- 73, 1993.
+\newblock ISSN 0895-7177.
+\newblock \doi{http://dx.doi.org/10.1016/0895-7177(93)90068-A}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/089571779390068A}.
+
+\bibitem[Allahverdi(2015)]{Allahverdi2015}
+Ali Allahverdi.
+\newblock The third comprehensive survey on scheduling problems with setup
+  times/costs.
+\newblock \emph{European Journal of Operational Research}, 246\penalty0
+  (2):\penalty0 345 -- 378, 2015.
+\newblock ISSN 0377-2217.
+\newblock \doi{https://doi.org/10.1016/j.ejor.2015.04.004}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221715002763}.
+
+\bibitem[Allahverdi and Soroush(2008)]{Allahverdi2008a}
+Ali Allahverdi and H.M. Soroush.
+\newblock The significance of reducing setup times/setup costs.
+\newblock \emph{European Journal of Operational Research}, 187\penalty0
+  (3):\penalty0 978 -- 984, 2008.
+\newblock ISSN 0377-2217.
+\newblock \doi{https://doi.org/10.1016/j.ejor.2006.09.010}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221706008162}.
+
+\bibitem[Allahverdi \emph{et~al.}(2008)Allahverdi, Ng, Cheng, and
+  Kovalyov]{Allahverdi2008b}
+Ali Allahverdi, C.T. Ng, T.C.E. Cheng, and Mikhail~Y. Kovalyov.
+\newblock A survey of scheduling problems with setup times or costs.
+\newblock \emph{European Journal of Operational Research}, 187\penalty0
+  (3):\penalty0 985 -- 1032, 2008.
+\newblock ISSN 0377-2217.
+\newblock \doi{https://doi.org/10.1016/j.ejor.2006.06.060}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221706008174}.
+
+\bibitem[Andr\'{e}s \emph{et~al.}(2008)Andr\'{e}s, Miralles, and
+  Pastor]{Andres2008}
+Carlos~Fern\'{a}ndez Andr\'{e}s, Crist\'{o}bal Miralles, and Rafael Pastor.
+\newblock Balancing and scheduling tasks in assembly lines with
+  sequence-dependent setup times.
+\newblock \emph{European Journal of Operations Research}, 187\penalty0
+  (3):\penalty0 1212--1223, 2008.
+
+\bibitem[Applegate \emph{et~al.}(2017)Applegate, Bixby, Chvátal, , and
+  Cook]{Applegate2017}
+David Applegate, Robert~E. Bixby, Vašek Chvátal, , and William~J. Cook.
+\newblock Concorde tsp solver, 2017.
+\newblock URL \url{http://www.math.uwaterloo.ca/tsp/concorde.html}.
+
+\bibitem[Baptiste and Pape(2000)]{Baptiste2000}
+Philippe Baptiste and Claude~Le Pape.
+\newblock Constraint propagation and decomposition techniques for highly
+  disjunctive and highly cumulative project scheduling problems.
+\newblock \emph{Constraints}, 5\penalty0 (1):\penalty0 119--139, 2000.
+\newblock ISSN 1572-9354.
+\newblock \doi{10.1023/A:1009822502231}.
+\newblock URL \url{http://dx.doi.org/10.1023/A:1009822502231}.
+
+\bibitem[Baybars(1986)]{Baybars1986}
+I~Baybars.
+\newblock A survey of exact algorithms for the simple assembly line balancing
+  problem.
+\newblock \emph{Manage. Sci.}, 32\penalty0 (8):\penalty0 900--932, August 1986.
+\newblock ISSN 0025-1909.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=9579.9580}.
+
+\bibitem[Becker and Scholl(2006)]{Becker2006}
+Christian Becker and Armin Scholl.
+\newblock A survey on problems and methods in generalized assembly line
+  balancing.
+\newblock \emph{European Journal of Operational Research}, 168\penalty0
+  (3):\penalty0 694 -- 715, 2006.
+\newblock ISSN 0377-2217.
+\newblock \doi{https://doi.org/10.1016/j.ejor.2004.07.023}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221704004801}.
+\newblock Balancing Assembly and Transfer lines.
+
+\bibitem[Benders(1962)]{Benders1962}
+J.~F. Benders.
+\newblock Partitioning procedures for solving mixed-variables programming
+  problems.
+\newblock \emph{Numer. Math.}, 4\penalty0 (1):\penalty0 238--252, December
+  1962.
+\newblock ISSN 0029-599X.
+\newblock \doi{10.1007/BF01386316}.
+\newblock URL \url{http://dx.doi.org/10.1007/BF01386316}.
+
+\bibitem[Benoist \emph{et~al.}(2002)Benoist, Gaudin, and
+  Rottembourg]{Benoist2002}
+Thierry Benoist, Etienne Gaudin, and Beno\^{\i}t Rottembourg.
+\newblock Constraint programming contribution to benders decomposition: A case
+  study.
+\newblock In \emph{Proceedings of the 8th International Conference on
+  Principles and Practice of Constraint Programming}, CP '02, pages 603--617,
+  London, UK, UK, 2002. Springer-Verlag.
+\newblock ISBN 3-540-44120-4.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=647489.727169}.
+
+\bibitem[Berthold \emph{et~al.}(2010)Berthold, Heinz, L\"{u}bbecke,
+  M\"{o}hring, and Schulz]{Berthold2010}
+Timo Berthold, Stefan Heinz, Marco~E. L\"{u}bbecke, Rolf~H. M\"{o}hring, and
+  Jens Schulz.
+\newblock A constraint integer programming approach for resource-constrained
+  project scheduling.
+\newblock In \emph{Proceedings of the 7th International Conference on
+  Integration of AI and OR Techniques in Constraint Programming for
+  Combinatorial Optimization Problems}, CPAIOR'10, pages 313--317, Berlin,
+  Heidelberg, 2010. Springer-Verlag.
+\newblock ISBN 3-642-13519-6, 978-3-642-13519-4.
+\newblock \doi{10.1007/978-3-642-13520-0_34}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-642-13520-0_34}.
+
+\bibitem[Bixby(2002)]{Bixby2002}
+Robert~E. Bixby.
+\newblock Solving real-world linear programs: A decade and more of progress.
+\newblock \emph{Oper. Res.}, 50\penalty0 (1):\penalty0 3--15, January 2002.
+\newblock ISSN 0030-364X.
+\newblock \doi{10.1287/opre.50.1.3.17780}.
+\newblock URL \url{http://dx.doi.org/10.1287/opre.50.1.3.17780}.
+
+\bibitem[Bockmayr and Kasper(1998)]{Bockmayr1998}
+Alexander Bockmayr and Thomas Kasper.
+\newblock Branch and infer: A unifying framework for integer and finite domain
+  constraint programming.
+\newblock \emph{INFORMS J. on Computing}, 10\penalty0 (3):\penalty0 287--300,
+  March 1998.
+\newblock ISSN 1526-5528.
+\newblock \doi{10.1287/ijoc.10.3.287}.
+\newblock URL \url{http://dx.doi.org/10.1287/ijoc.10.3.287}.
+
+\bibitem[Boysen \emph{et~al.}(2007)Boysen, Fliedner, and Scholl]{Boysen2007}
+Nils Boysen, Malte Fliedner, and Armin Scholl.
+\newblock A classification of assembly line balancing problems.
+\newblock \emph{European Journal of Operational Research}, 183\penalty0
+  (2):\penalty0 674 -- 693, 2007.
+\newblock ISSN 0377-2217.
+\newblock \doi{https://doi.org/10.1016/j.ejor.2006.10.010}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221706010435}.
+
+\bibitem[Carlier and Pinson(2004)]{Carlier2004}
+Jacques Carlier and Eric Pinson.
+\newblock Jackson's pseudo-preemptive schedule and cumulative scheduling
+  problems.
+\newblock \emph{Discrete Applied Mathematics}, 145\penalty0 (1):\penalty0 80 --
+  94, 2004.
+\newblock ISSN 0166-218X.
+\newblock \doi{https://doi.org/10.1016/j.dam.2003.09.009}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0166218X04000678}.
+\newblock Graph Optimization \{IV\}.
+
+\bibitem[Caseau and Laburthe(1994)]{Caseau1994}
+Yves Caseau and François Laburthe.
+\newblock Cumulative scheduling with task intervals, 1994.
+
+\bibitem[Chu(2011)]{Chu2011}
+Geoffrey~G. Chu.
+\newblock \emph{Improving Combinatorial Optimization}.
+\newblock PhD thesis, The University of Melbourne, 2011.
+\newblock URL \url{http://hdl.handle.net/11343/36679}.
+
+\bibitem[Cordeau \emph{et~al.}(2001)Cordeau, Stojković, Soumis, and
+  Desrosiers]{Cordeau2001}
+Jean-François Cordeau, Goran Stojković, François Soumis, and Jacques
+  Desrosiers.
+\newblock Benders decomposition for simultaneous aircraft routing and crew
+  scheduling.
+\newblock \emph{Transportation Science}, 35\penalty0 (4):\penalty0 375--388,
+  2001.
+\newblock ISSN 00411655, 15265447.
+\newblock URL \url{http://www.jstor.org/stable/25768970}.
+
+\bibitem[Costa(2005)]{Costa2005}
+Alysson~M. Costa.
+\newblock A survey on benders decomposition applied to fixed-charge network
+  design problems.
+\newblock \emph{Comput. Oper. Res.}, 32\penalty0 (6):\penalty0 1429--1450, June
+  2005.
+\newblock ISSN 0305-0548.
+\newblock \doi{10.1016/j.cor.2003.11.012}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.cor.2003.11.012}.
+
+\bibitem[Demassey \emph{et~al.}(2005)Demassey, Pesant, and
+  Rousseau]{Demassey2005}
+Sophie Demassey, Gilles Pesant, and Louis-Martin Rousseau.
+\newblock \emph{Constraint Programming Based Column Generation for Employee
+  Timetabling}, pages 140--154.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2005.
+\newblock ISBN 978-3-540-32264-1.
+\newblock \doi{10.1007/11493853_12}.
+\newblock URL \url{http://dx.doi.org/10.1007/11493853_12}.
+
+\bibitem[Dempster and Thompson(1998)]{Dempster1998}
+M.~A.~H. Dempster and R.~T. Thompson.
+\newblock Parallelization and aggregation ofnested benders decomposition.
+\newblock \emph{Annals of Operations Research}, 81\penalty0 (0):\penalty0
+  163--188, 1998.
+\newblock ISSN 1572-9338.
+\newblock \doi{10.1023/A:1018996821817}.
+\newblock URL \url{http://dx.doi.org/10.1023/A:1018996821817}.
+
+\bibitem[Ehlers and Stuckey(2016)]{Ehlers2016}
+Thorsten Ehlers and Peter~J. Stuckey.
+\newblock \emph{Parallelizing Constraint Programming with Learning}, pages
+  142--158.
+\newblock Springer International Publishing, Cham, 2016.
+\newblock ISBN 978-3-319-33954-2.
+\newblock \doi{10.1007/978-3-319-33954-2_11}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-319-33954-2_11}.
+
+\bibitem[Esmaeilbeigi \emph{et~al.}(2016)Esmaeilbeigi, Naderi, and
+  Charkhgard]{Esmaeilbeigi2016}
+Rasul Esmaeilbeigi, Bahman Naderi, and Parisa Charkhgard.
+\newblock New formulations for the setup assembly line balancing and scheduling
+  problem.
+\newblock \emph{OR Spectrum}, 38\penalty0 (2):\penalty0 493--518, 2016.
+
+\bibitem[Feydy \emph{et~al.}(2017)Feydy, Goldwaser, Schutt, Stuckey, Young, and
+  Feydy]{Young2017b}
+Thibaut Feydy, Adrian Goldwaser, Andreas Schutt, Peter~J. Stuckey, Kenneth
+  Young, and Thibaut Feydy.
+\newblock Priority search with minizinc, 2017.
+
+\bibitem[Ford and Crowther(1922)]{Ford1922}
+Henry Ford and Samuel Crowther.
+\newblock \emph{My Life and Work by Henry Ford}.
+\newblock Garden City, N.Y., Doubleday, Page Co, 1922.
+\newblock URL \url{http://www.gutenberg.org/ebooks/7213}.
+
+\bibitem[Geoffrion(1972)]{Geoffrion1972}
+A.~M. Geoffrion.
+\newblock Generalized benders decomposition.
+\newblock \emph{Journal of Optimization Theory and Applications}, 10\penalty0
+  (4):\penalty0 237--260, 1972.
+\newblock ISSN 1573-2878.
+\newblock \doi{10.1007/BF00934810}.
+\newblock URL \url{http://dx.doi.org/10.1007/BF00934810}.
+
+\bibitem[Hooker(2005)]{Hooker2005}
+J.~N. Hooker.
+\newblock A hybrid method for the planning and scheduling.
+\newblock \emph{Constraints}, 10\penalty0 (4):\penalty0 385--401, 2005.
+\newblock ISSN 1572-9354.
+\newblock \doi{10.1007/s10601-005-2812-2}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10601-005-2812-2}.
+
+\bibitem[Hooker(2007)]{Hooker2007}
+J.~N. Hooker.
+\newblock Planning and scheduling by logic-based benders decomposition.
+\newblock \emph{Oper. Res.}, 55\penalty0 (3):\penalty0 588--602, May 2007.
+\newblock ISSN 0030-364X.
+\newblock \doi{10.1287/opre.1060.0371}.
+\newblock URL \url{http://dx.doi.org/10.1287/opre.1060.0371}.
+
+\bibitem[Hooker and Ottosson(2003)]{Hooker2003}
+J.N. Hooker and G.~Ottosson.
+\newblock Logic-based benders decomposition.
+\newblock \emph{Mathematical Programming}, 96\penalty0 (1):\penalty0 33--60,
+  2003.
+\newblock ISSN 1436-4646.
+\newblock \doi{10.1007/s10107-003-0375-9}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10107-003-0375-9}.
+
+\bibitem[Jaffar and Lassez(1987)]{Jaffar1987}
+J.~Jaffar and J.-L. Lassez.
+\newblock Constraint logic programming.
+\newblock In \emph{Proceedings of the 14th ACM SIGACT-SIGPLAN Symposium on
+  Principles of Programming Languages}, POPL '87, pages 111--119, New York, NY,
+  USA, 1987. ACM.
+\newblock ISBN 0-89791-215-2.
+\newblock \doi{10.1145/41625.41635}.
+\newblock URL \url{http://doi.acm.org/10.1145/41625.41635}.
+
+\bibitem[Jain and Grossmann(2001)]{Jain2001}
+Vipul Jain and Ignacio~E. Grossmann.
+\newblock Algorithms for hybrid milp/cp models for a class of optimization
+  problems.
+\newblock \emph{INFORMS J. on Computing}, 13\penalty0 (4):\penalty0 258--276,
+  September 2001.
+\newblock ISSN 1526-5528.
+\newblock \doi{10.1287/ijoc.13.4.258.9733}.
+\newblock URL \url{http://dx.doi.org/10.1287/ijoc.13.4.258.9733}.
+
+\bibitem[Land and Doig(1960)]{land1960}
+A.H. Land and A.G. Doig.
+\newblock \emph{An Automatic Method of Solving Discrete Programming Problems}.
+\newblock Reprint series / Research Techniques Unit of the London School of
+  Economics and Political Science). London School of Economics and Political
+  Science, 1960.
+\newblock URL \url{https://books.google.com.au/books?id=V61oMwEACAAJ}.
+
+\bibitem[Li(2015)]{Li2015}
+H.~Li.
+\newblock \emph{Benders Decomposition Approach for Project Scheduling with
+  Multi-Purpose Resources}, pages 587--601.
+\newblock Springer International Publishing, Switzerland, Cham, 2015.
+\newblock ISBN 978-3-319-05443-8.
+\newblock \doi{10.1007/978-3-319-05443-8_27}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-319-05443-8_27}.
+
+\bibitem[Li and Womer(2009{\natexlab{a}})]{Li2009a}
+H.~Li and K.~Womer.
+\newblock Scheduling projects with multi-skilled personnel by a hybrid milp/cp
+  benders decomposition algorithm.
+\newblock \emph{Journal of Scheduling}, 12\penalty0 (3):\penalty0 281,
+  2009{\natexlab{a}}.
+\newblock ISSN 1099-1425.
+\newblock \doi{10.1007/s10951-008-0079-3}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10951-008-0079-3}.
+
+\bibitem[Li and Amini(2012)]{Li2012}
+Haitao Li and Mehdi Amini.
+\newblock A hybrid optimization approach to configure a supply chain for new
+  product diffusion: a case study of multiple-sourcing strategy.
+\newblock \emph{International Journal of Production Research}, 50\penalty0
+  (11):\penalty0 3152--3171, 2012.
+
+\bibitem[Li and Womer(2009{\natexlab{b}})]{Li2009b}
+Haitao Li and Keith Womer.
+\newblock A decomposition approach for shipboard manpower scheduling.
+\newblock \emph{Military Operations Research}, 14\penalty0 (3):\penalty0 1--23,
+  2009{\natexlab{b}}.
+
+\bibitem[Lodi(2010)]{Lodi2010}
+Andrea Lodi.
+\newblock \emph{Mixed Integer Programming Computation}, pages 619--645.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2010.
+\newblock ISBN 978-3-540-68279-0.
+\newblock \doi{10.1007/978-3-540-68279-0_16}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-540-68279-0_16}.
+
+\bibitem[Magnanti and Wong(1981)]{Magnanti1981}
+T.~L. Magnanti and R.~T. Wong.
+\newblock Accelerating benders decomposition: Algorithmic enhancement and model
+  selection criteria.
+\newblock \emph{Operations Research}, 29\penalty0 (3):\penalty0 464--484, 1981.
+\newblock ISSN 0030364X, 15265463.
+\newblock URL \url{http://www.jstor.org/stable/170108}.
+
+\bibitem[Maher \emph{et~al.}(2014)Maher, Desaulniers, and Soumis]{Maher2014}
+Stephen~J. Maher, Guy Desaulniers, and Fran\c{c}ois Soumis.
+\newblock Recoverable robust single day aircraft maintenance routing problem.
+\newblock \emph{Comput. Oper. Res.}, 51:\penalty0 130--145, November 2014.
+\newblock ISSN 0305-0548.
+\newblock \doi{10.1016/j.cor.2014.03.007}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.cor.2014.03.007}.
+
+\bibitem[Martino and Pastor(2010)]{Martino2010}
+Luigi Martino and Rafael Pastor.
+\newblock Heuristic procedures for solving the general assembly line balancing
+  problem with setups.
+\newblock \emph{International Journal of Production Research}, 48\penalty0
+  (6):\penalty0 1787--1804, 2010.
+\newblock \doi{10.1080/00207540802577979}.
+\newblock URL \url{http://dx.doi.org/10.1080/00207540802577979}.
+
+\bibitem[Nethercote \emph{et~al.}(2007)Nethercote, Stuckey, Becket, Brand,
+  Duck, and Tack]{Nethercote2007}
+N.~Nethercote, P.~J. Stuckey, R.~Becket, S.~Brand, G.~J. Duck, and G.~Tack.
+\newblock Minizinc: Towards a standard cp modelling language.
+\newblock In Christian Bessi{\`e}re, editor, \emph{Principles and Practice of
+  Constraint Programming -- CP 2007: 13th International Conference, CP 2007,
+  Providence, RI, USA, September 23-27, 2007. Proceedings}, pages 529--543,
+  Berlin, Heidelberg, 2007. Springer Berlin Heidelberg.
+\newblock ISBN 978-3-540-74970-7.
+\newblock \doi{10.1007/978-3-540-74970-7_38}.
+
+\bibitem[Nielsen and Zenios(1997)]{Nielsen1997}
+Soren~S. Nielsen and Stavros~A. Zenios.
+\newblock Scalable parallel benders decomposition for stochastic linear
+  programming.
+\newblock \emph{Parallel Computing}, 23\penalty0 (8):\penalty0 1069 -- 1088,
+  1997.
+\newblock ISSN 0167-8191.
+\newblock \doi{http://dx.doi.org/10.1016/S0167-8191(97)00044-6}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0167819197000446}.
+
+\bibitem[Nuijten(1994)]{Nuijten1994}
+W.P.M. Nuijten.
+\newblock \emph{Time and resource constrained scheduling : a constraint
+  satisfaction approach}.
+\newblock PhD thesis, Technische Universiteit Eindhoven, 1994.
+\newblock URL \url{http://dx.doi.org/10.6100/IR431902}.
+
+\bibitem[Ohrimenko \emph{et~al.}(2009)Ohrimenko, Stuckey, and
+  Codish]{Ohrimenko2009}
+Olga Ohrimenko, Peter~J. Stuckey, and Michael Codish.
+\newblock Propagation via lazy clause generation.
+\newblock \emph{Constraints}, 14\penalty0 (3):\penalty0 357--391, 2009.
+\newblock ISSN 1572-9354.
+\newblock \doi{10.1007/s10601-008-9064-x}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10601-008-9064-x}.
+
+\bibitem[Padberg and Rinaldi(1991)]{Padberg1991}
+Manfred Padberg and Giovanni Rinaldi.
+\newblock A branch-and-cut algorithm for the resolution of large-scale
+  symmetric traveling salesman problems.
+\newblock \emph{SIAM Review}, 33\penalty0 (1):\penalty0 60--100, 1991.
+\newblock \doi{10.1137/1033004}.
+\newblock URL \url{http://dx.doi.org/10.1137/1033004}.
+
+\bibitem[Pisinger and Sigurd(2007)]{Pisinger2007}
+David Pisinger and Mikkel Sigurd.
+\newblock Using decomposition techniques and constraint programming for solving
+  the two-dimensional bin-packing problem.
+\newblock \emph{INFORMS J. on Computing}, 19\penalty0 (1):\penalty0 36--51,
+  January 2007.
+\newblock ISSN 1526-5528.
+\newblock \doi{10.1287/ijoc.1060.0181}.
+\newblock URL \url{http://dx.doi.org/10.1287/ijoc.1060.0181}.
+
+\bibitem[Rahmaniani \emph{et~al.}(2017)Rahmaniani, Crainic, Gendreau, and
+  Rei]{Rahmaniani2017}
+R.~Rahmaniani, T.G. Crainic, M.~Gendreau, and W.~Rei.
+\newblock The benders decomposition algorithm: A literature review.
+\newblock \emph{European Journal of Operational Research}, 259\penalty0
+  (3):\penalty0 801--817, 2017.
+\newblock \doi{10.1016/j.ejor.2016.12.005}.
+\newblock URL
+  \url{https://www.scopus.com/inward/record.uri?eid=2-s2.0-85009384722&doi=10.1016%2fj.ejor.2016.12.005&partnerID=40&md5=68f888c6abfc502d35488967968de98b}.
+\newblock cited By 1.
+
+\bibitem[Rodriguez(2007)]{Rodriguez2007}
+J.~Rodriguez.
+\newblock A constraint programming model for real-time train scheduling at
+  junctions, 2007.
+
+\bibitem[Saharidis and Ierapetritou(2010)]{Saharidis2010}
+Georgios K.~D. Saharidis and Marianthi~G. Ierapetritou.
+\newblock Improving benders decomposition using maximum feasible subsystem
+  (mfs) cut generation strategy.
+\newblock \emph{Computers and Chemical Engineering}, 34\penalty0 (8):\penalty0
+  1237--1245, 2010.
+\newblock URL
+  \url{http://dblp.uni-trier.de/db/journals/cce/cce34.html#SaharidisI10}.
+
+\bibitem[Santoso \emph{et~al.}(2005)Santoso, Ahmed, Goetschalckx, and
+  Shapiro]{Santoso2005}
+Tjendera Santoso, Shabbir Ahmed, Marc Goetschalckx, and Alexander Shapiro.
+\newblock {A stochastic programming approach for supply chain network design
+  under uncertainty}.
+\newblock \emph{European Journal of Operational Research}, 167\penalty0
+  (1):\penalty0 96--115, November 2005.
+\newblock URL
+  \url{https://ideas.repec.org/a/eee/ejores/v167y2005i1p96-115.html}.
+
+\bibitem[Savelsbergh(1997)]{Savelsbergh1997}
+Martin Savelsbergh.
+\newblock A branch-and-price algorithm for the generalized assignment problem.
+\newblock \emph{Operations Research}, 45\penalty0 (6):\penalty0 831--841, 1997.
+\newblock URL
+  \url{http://EconPapers.repec.org/RePEc:inm:oropre:v:45:y:1997:i:6:p:831-841}.
+
+\bibitem[Scholl and Klein(1999)]{Scholl1999}
+Armin Scholl and Robert Klein.
+\newblock Balancing assembly lines effectively – a computational comparison.
+\newblock \emph{European Journal of Operational Research}, 114\penalty0
+  (1):\penalty0 50 -- 58, 1999.
+\newblock ISSN 0377-2217.
+\newblock \doi{https://doi.org/10.1016/S0377-2217(98)00173-8}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0377221798001738}.
+
+\bibitem[Scholl \emph{et~al.}(2013)Scholl, Boysen, and Fliedner]{Scholl2013}
+Armin Scholl, Nils Boysen, and Malte Fliedner.
+\newblock The assembly line balancing and scheduling problem with
+  sequence-dependent setup times: problem extension, model formulation and
+  efficient heuristics.
+\newblock \emph{OR Spectrum}, 35\penalty0 (1):\penalty0 291--320, 2013.
+
+\bibitem[Schrijvers \emph{et~al.}(2013{\natexlab{a}})Schrijvers, Tack, Wuille,
+  Samulowitz, and Stuckey]{Schrijvers2013a}
+Tom Schrijvers, Guido Tack, Pieter Wuille, Horst Samulowitz, and Peter~J.
+  Stuckey.
+\newblock \emph{An Introduction to Search Combinators}, pages 2--16.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2013{\natexlab{a}}.
+\newblock ISBN 978-3-642-38197-3.
+\newblock \doi{10.1007/978-3-642-38197-3_2}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-642-38197-3_2}.
+
+\bibitem[Schrijvers \emph{et~al.}(2013{\natexlab{b}})Schrijvers, Tack, Wuille,
+  Samulowitz, and Stuckey]{Schrijvers2013b}
+Tom Schrijvers, Guido Tack, Pieter Wuille, Horst Samulowitz, and Peter~J.
+  Stuckey.
+\newblock Search combinators.
+\newblock \emph{Constraints}, 18\penalty0 (2):\penalty0 269--305,
+  2013{\natexlab{b}}.
+\newblock ISSN 1572-9354.
+\newblock \doi{10.1007/s10601-012-9137-8}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10601-012-9137-8}.
+
+\bibitem[Schutt \emph{et~al.}(2011{\natexlab{a}})Schutt, Feydy, Stuckey, and
+  Wallace]{Schutt2011a}
+A.~Schutt, T.~Feydy, P.~J. Stuckey, and M.~G. Wallace.
+\newblock Explaining the cumulative propagator.
+\newblock \emph{Constraints}, 16\penalty0 (3):\penalty0 250--282,
+  2011{\natexlab{a}}.
+\newblock ISSN 1572-9354.
+\newblock \doi{10.1007/s10601-010-9103-2}.
+\newblock URL \url{http://dx.doi.org/10.1007/s10601-010-9103-2}.
+
+\bibitem[Schutt \emph{et~al.}(2011{\natexlab{b}})Schutt, Stuckey, and
+  Verden]{Schutt2011b}
+A.~Schutt, P.~J. Stuckey, and A.~R. Verden.
+\newblock Optimal carpet cutting.
+\newblock In Jimmy Lee, editor, \emph{Proceedings of Principles and Practice of
+  Constraint Programming -- CP 2011}, pages 69--84, Berlin, Heidelberg,
+  2011{\natexlab{b}}. Springer Berlin Heidelberg.
+\newblock ISBN 978-3-642-23786-7.
+\newblock \doi{10.1007/978-3-642-23786-7_8}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-642-23786-7_8}.
+
+\bibitem[Schutt \emph{et~al.}(2013{\natexlab{a}})Schutt, Feydy, and
+  Stuckey]{Schutt2013b}
+A.~Schutt, T.~Feydy, and P.~J. Stuckey.
+\newblock Scheduling optional tasks with explanation.
+\newblock In Christian Schulte, editor, \emph{Proceedings of Principles and
+  Practice of Constraint Programming -- CP 2013}, pages 628--644, Berlin,
+  Heidelberg, 2013{\natexlab{a}}. Springer Berlin Heidelberg.
+\newblock ISBN 978-3-642-40627-0.
+\newblock \doi{10.1007/978-3-642-40627-0_47}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-642-40627-0_47}.
+
+\bibitem[Schutt \emph{et~al.}(2013{\natexlab{b}})Schutt, Feydy, and
+  Stuckey]{Schutt2013c}
+Andreas Schutt, Thibaut Feydy, and Peter~J. Stuckey.
+\newblock Explaining time-table-edge-finding propagation for the cumulative
+  resource constraint.
+\newblock In Carla~P. Gomes and Meinolf Sellmann, editors, \emph{Integration of
+  AI and OR Techniques in Constraint Programming for Combinatorial Optimization
+  Problems}, volume 7874 of \emph{Lecture Notes in Computer Science}, pages
+  234--250. Springer Berlin Heidelberg, 2013{\natexlab{b}}.
+\newblock ISBN 978-3-642-38170-6.
+\newblock \doi{10.1007/978-3-642-38171-3_16}.
+
+\bibitem[Schutt \emph{et~al.}(2015)Schutt, Feydy, Stuckey, and
+  Wallace]{Schutt2015}
+Andreas Schutt, Thibaut Feydy, Peter~J. Stuckey, and Mark~G. Wallace.
+\newblock A satisfiability solving approach.
+\newblock In Christoph Schwindt and J{\"u}rgen Zimmermann, editors,
+  \emph{Handbook on Project Management and Scheduling Vol.~1}, pages 135--160.
+  Springer International Publishing, Cham, 2015.
+\newblock ISBN 978-3-319-05443-8.
+\newblock \doi{10.1007/978-3-319-05443-8_7}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-319-05443-8_7}.
+
+\bibitem[Szeredi and Schutt(2016)]{Szeredi2016}
+R.~Szeredi and A.~Schutt.
+\newblock Modelling and solving multi-mode resource-constrained project
+  scheduling.
+\newblock In Michel Rueher, editor, \emph{Proceedings of Principles and
+  Practice of Constraint Programming -- CP 2016}, pages 483--492, Switzerland,
+  Cham, 2016. Springer International Publishing.
+\newblock ISBN 978-3-319-44953-1.
+\newblock \doi{10.1007/978-3-319-44953-1_31}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-319-44953-1_31}.
+
+\bibitem[Timpe(2002)]{Timpe2002}
+Christian Timpe.
+\newblock Solving planning and scheduling problems with combined integer and
+  constraint programming.
+\newblock \emph{OR Spectrum}, 24\penalty0 (4):\penalty0 431--448, 2002.
+\newblock ISSN 1436-6304.
+\newblock \doi{10.1007/s00291-002-0107-1}.
+\newblock URL \url{http://dx.doi.org/10.1007/s00291-002-0107-1}.
+
+\bibitem[Tran and Beck(2012)]{Tran2012}
+Tony~T. Tran and J.~Christopher Beck.
+\newblock Logic-based benders decomposition for alternative resource scheduling
+  with sequence dependent setups.
+\newblock In \emph{Proceedings of the 20th European Conference on Artificial
+  Intelligence}, ECAI'12, pages 774--779, Amsterdam, The Netherlands, The
+  Netherlands, 2012. IOS Press.
+\newblock ISBN 978-1-61499-097-0.
+\newblock \doi{10.3233/978-1-61499-098-7-774}.
+\newblock URL \url{https://doi.org/10.3233/978-1-61499-098-7-774}.
+
+\bibitem[Van~Hentenryck \emph{et~al.}(2000)Van~Hentenryck, Perron, and
+  Puget]{VanHentenryck2000}
+Pascal Van~Hentenryck, Laurent Perron, and Jean-Fran\c{c}ois Puget.
+\newblock Search and strategies in opl.
+\newblock \emph{ACM Trans. Comput. Logic}, 1\penalty0 (2):\penalty0 285--320,
+  October 2000.
+\newblock ISSN 1529-3785.
+\newblock \doi{10.1145/359496.359529}.
+\newblock URL \url{http://doi.acm.org/10.1145/359496.359529}.
+
+\bibitem[Yolmeh and Kianfar(2012)]{Yolmeh2012}
+Abdolmajid Yolmeh and Farhad Kianfar.
+\newblock An efficient hybrid genetic algorithm to solve assembly line
+  balancing problem with sequence-dependent setup times.
+\newblock \emph{Comput. Ind. Eng.}, 62\penalty0 (4):\penalty0 936--945, May
+  2012.
+\newblock ISSN 0360-8352.
+\newblock \doi{10.1016/j.cie.2011.12.017}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.cie.2011.12.017}.
+
+\end{thebibliography}

@@ -1,0 +1,1446 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.3)  22 AUG 2017 21:39
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis-kdyoung.tex
+(/home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/home/ken/repos/sualbsp-2/thesis/mqthesis.cls
+Document Class: mqthesis 2013/10/14 Macquarie University physics thesis LaTeX c
+lass
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 143.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/quotchap/quotchap.sty
+Package: quotchap 2012/10/20 v1.1 Decorative Chapter Headings with Quotes
+\@quotebox=\box26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+Package color Info: Redefining color chaptergrey on input line 219.
+
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip52
+\bibsep=\skip53
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+)
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen113
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip10
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks17
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks18
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks19
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip57
+\thm@postskip=\skip58
+\thm@headsep=\skip59
+\dth@everypar=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen122
+\epsfysize=\dimen123
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks27
+\verbatim@line=\toks28
+\verbatim@in@stream=\read1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count105
+\float@exts=\toks29
+\float@box=\box29
+\@float@everytoks=\toks30
+\@floatcapt=\box30
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/home/ken/repos/sualbsp-2/thesis/IEEEtrantools.sty
+Package: IEEEtrantools 2015/08/26 V1.5 by Michael Shell
+
+-- See the "IEEEtrantools_doc.txt" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/tools/
+\@IEEEtrantmpdimenA=\dimen124
+\@IEEEtrantmpdimenB=\dimen125
+\@IEEEtrantmpdimenC=\dimen126
+\@IEEEtrantmpcountA=\count106
+\@IEEEtrantmpcountB=\count107
+\@IEEEtrantmpcountC=\count108
+\@IEEEtrantmptoksA=\toks31
+\IEEEnormaljot=\dimen127
+\IEEEquantizedlength=\dimen128
+\IEEEquantizedlengthdiff=\dimen129
+\IEEEquantizedtextheightdiff=\dimen130
+\IEEEilabelindentA=\dimen131
+\IEEEilabelindentB=\dimen132
+\IEEEilabelindent=\dimen133
+\IEEEelabelindent=\dimen134
+\IEEEdlabelindent=\dimen135
+\IEEElabelindent=\dimen136
+\IEEEiednormlabelsep=\dimen137
+\IEEEiedmathlabelsep=\dimen138
+\IEEEiedtopsep=\skip60
+\c@IEEEsubequation=\count109
+\@IEEEeqnnumcols=\count110
+\@IEEEeqncolcnt=\count111
+\@IEEEsubeqnnumrollback=\count112
+\IEEEPARstartletwidth=\dimen139
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+\c@tracingmulticols=\count113
+\mult@box=\box31
+\multicol@leftmargin=\dimen140
+\c@unbalance=\count114
+\c@collectmore=\count115
+\doublecol@number=\count116
+\multicoltolerance=\count117
+\multicolpretolerance=\count118
+\full@width=\dimen141
+\page@free=\dimen142
+\premulticols=\dimen143
+\postmulticols=\dimen144
+\multicolsep=\skip61
+\multicolbaselineskip=\skip62
+\partial@page=\box32
+\last@line=\box33
+\maxbalancingoverflow=\dimen145
+\mult@rightbox=\box34
+\mult@grightbox=\box35
+\mult@gfirstbox=\box36
+\mult@firstbox=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\c@columnbadness=\count119
+\c@finalcolumnbadness=\count120
+\last@try=\dimen146
+\multicolovershoot=\dimen147
+\multicolundershoot=\dimen148
+\mult@nat@firstbox=\box55
+\colbreak@box=\box56
+\mc@col@check@num=\count121
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen149
+)
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip63
+\@affilsep=\skip64
+\c@Maxaffil=\count122
+\c@authors=\count123
+\c@affil=\count124
+)
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/chngpage.sty
+Package: chngpage 2009/10/20 v1.2b change page layout
+\c@cp@cnt=\count125
+\c@cp@tempcnt=\count126
+)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup7
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count127
+\lst@gtempboxa=\box57
+\lst@token=\toks32
+\lst@length=\count128
+\lst@currlwidth=\dimen150
+\lst@column=\count129
+\lst@pos=\count130
+\lst@lostspace=\dimen151
+\lst@width=\dimen152
+\lst@newlines=\count131
+\lst@lineno=\count132
+\lst@maxwidth=\dimen153
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count133
+\lst@skipnumbers=\count134
+\lst@framebox=\box58
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen154
+\lightrulewidth=\dimen155
+\cmidrulewidth=\dimen156
+\belowrulesep=\dimen157
+\belowbottomsep=\dimen158
+\aboverulesep=\dimen159
+\abovetopsep=\dimen160
+\cmidrulesep=\dimen161
+\cmidrulekern=\dimen162
+\defaultaddspace=\dimen163
+\@cmidla=\count135
+\@cmidlb=\count136
+\@aboverulesep=\dimen164
+\@belowrulesep=\dimen165
+\@thisruleclass=\count137
+\@lastruleclass=\count138
+\@thisrulewidth=\dimen166
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count139
+\calc@Bcount=\count140
+\calc@Adimen=\dimen167
+\calc@Bdimen=\dimen168
+\calc@Askip=\skip65
+\calc@Bskip=\skip66
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count141
+\calc@Cskip=\skip67
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
+))
+(/home/ken/repos/sualbsp-2/thesis/algpseudocode.sty
+Package: algpseudocode 
+
+(/home/ken/repos/sualbsp-2/thesis/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count142
+\c@ALG@rem=\count143
+\c@ALG@nested=\count144
+\ALG@tlm=\skip68
+\ALG@thistlm=\skip69
+\c@ALG@Lnr=\count145
+\c@ALG@blocknr=\count146
+\c@ALG@storecount=\count147
+\c@ALG@tmpcounter=\count148
+\ALG@tmplength=\skip70
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\@float@every@algorithm=\toks33
+\c@algorithm=\count149
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2016/01/19 v6377 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2016/01/19 v6377 L3 programming layer (code)
+L3 Module: l3bootstrap 2016/01/01 v6339 L3 Bootstrap code
+L3 Module: l3names 2015/12/21 v6328 L3 Namespace for primitives
+L3 Module: l3basics 2015/11/22 v6315 L3 Basic definitions
+L3 Module: l3expan 2015/09/10 v5983 L3 Argument expansion
+L3 Module: l3tl 2015/09/29 v6121 L3 Token lists
+L3 Module: l3str 2016/01/03 v6357 L3 Strings
+L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
+L3 Module: l3int 2016/01/05 v6366 L3 Integers
+\c_max_int=\count150
+\l_tmpa_int=\count151
+\l_tmpb_int=\count152
+\g_tmpa_int=\count153
+\g_tmpb_int=\count154
+L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
+L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
+\g__prg_map_int=\count155
+L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
+L3 Module: l3token 2015/11/11 v6249 L3 Experimental token manipulation
+L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
+L3 Module: l3msg 2015/09/28 v6113 L3 Messages
+L3 Module: l3file 2015/12/03 v6317 L3 File and I/O operations
+\l_iow_line_count_int=\count156
+\l__iow_target_count_int=\count157
+\l__iow_current_line_int=\count158
+\l__iow_current_word_int=\count159
+\l__iow_current_indentation_int=\count160
+L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
+\c_zero_dim=\dimen169
+\c_max_dim=\dimen170
+\l_tmpa_dim=\dimen171
+\l_tmpb_dim=\dimen172
+\g_tmpa_dim=\dimen173
+\g_tmpb_dim=\dimen174
+\c_zero_skip=\skip71
+\c_max_skip=\skip72
+\l_tmpa_skip=\skip73
+\l_tmpb_skip=\skip74
+\g_tmpa_skip=\skip75
+\g_tmpb_skip=\skip76
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
+\g__keyval_level_int=\count161
+\l_keys_choice_int=\count162
+L3 Module: l3fp 2015/08/25 v5890 L3 Floating points
+\c__fp_leading_shift_int=\count163
+\c__fp_middle_shift_int=\count164
+\c__fp_trailing_shift_int=\count165
+\c__fp_big_leading_shift_int=\count166
+\c__fp_big_middle_shift_int=\count167
+\c__fp_big_trailing_shift_int=\count168
+\c__fp_Bigg_leading_shift_int=\count169
+\c__fp_Bigg_middle_shift_int=\count170
+\c__fp_Bigg_trailing_shift_int=\count171
+L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
+\c_empty_box=\box59
+\l_tmpa_box=\box60
+\l_tmpb_box=\box61
+\g_tmpa_box=\box62
+\g_tmpb_box=\box63
+L3 Module: l3coffins 2015/08/06 v5789 L3 Coffin code layer
+\l__coffin_internal_box=\box64
+\l__coffin_internal_dim=\dimen175
+\l__coffin_offset_x_dim=\dimen176
+\l__coffin_offset_y_dim=\dimen177
+\l__coffin_x_dim=\dimen178
+\l__coffin_y_dim=\dimen179
+\l__coffin_x_prime_dim=\dimen180
+\l__coffin_y_prime_dim=\dimen181
+\c_empty_coffin=\box65
+\l__coffin_aligned_coffin=\box66
+\l__coffin_aligned_internal_coffin=\box67
+\l_tmpa_coffin=\box68
+\l_tmpb_coffin=\box69
+\l__coffin_display_coffin=\box70
+\l__coffin_display_coord_coffin=\box71
+\l__coffin_display_pole_coffin=\box72
+\l__coffin_display_offset_dim=\dimen182
+\l__coffin_display_x_dim=\dimen183
+\l__coffin_display_y_dim=\dimen184
+L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
+L3 Module: l3sys 2015/09/25 v6087 L3 Experimental system/runtime functions
+L3 Module: l3candidates 2016/01/14 v6376 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen185
+\l__box_bottom_dim=\dimen186
+\l__box_left_dim=\dimen187
+\l__box_right_dim=\dimen188
+\l__box_top_new_dim=\dimen189
+\l__box_bottom_new_dim=\dimen190
+\l__box_left_new_dim=\dimen191
+\l__box_right_new_dim=\dimen192
+\l__box_internal_box=\box73
+\l__coffin_bounding_shift_dim=\dimen193
+\l__coffin_left_corner_dim=\dimen194
+\l__coffin_right_corner_dim=\dimen195
+\l__coffin_bottom_corner_dim=\dimen196
+\l__coffin_top_corner_dim=\dimen197
+\l__coffin_scaled_total_height_dim=\dimen198
+\l__coffin_scaled_width_dim=\dimen199
+L3 Module: l3luatex 2015/11/11 v6250 L3 Experimental LuaTeX-specific functions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2015/11/11 v6250 L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count172
+))
+Package: xparse 2016/01/19 v6377 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count173
+\l__xparse_m_args_int=\count174
+\l__xparse_mandatory_args_int=\count175
+\l__xparse_processor_int=\count176
+\l__xparse_v_nesting_int=\count177
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count178
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-abspage.sty
+Package: zref-abspage 2012/04/04 v2.24 Module abspage for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/zref-base.sty
+Package: zref-base 2012/04/04 v2.24 Module base for zref (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 759.
+Package zref Info: New property: default on input line 760.
+Package zref Info: New property: page on input line 761.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+)
+\c@abspage=\count179
+Package zref Info: New property: abspage on input line 62.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip77
+\c@mdf@globalstyle@cnt=\count180
+\mdf@skipabove@length=\skip78
+\mdf@skipbelow@length=\skip79
+\mdf@leftmargin@length=\skip80
+\mdf@rightmargin@length=\skip81
+\mdf@innerleftmargin@length=\skip82
+\mdf@innerrightmargin@length=\skip83
+\mdf@innertopmargin@length=\skip84
+\mdf@innerbottommargin@length=\skip85
+\mdf@splittopskip@length=\skip86
+\mdf@splitbottomskip@length=\skip87
+\mdf@outermargin@length=\skip88
+\mdf@innermargin@length=\skip89
+\mdf@linewidth@length=\skip90
+\mdf@innerlinewidth@length=\skip91
+\mdf@middlelinewidth@length=\skip92
+\mdf@outerlinewidth@length=\skip93
+\mdf@roundcorner@length=\skip94
+\mdf@footenotedistance@length=\skip95
+\mdf@userdefinedwidth@length=\skip96
+\mdf@needspace@length=\skip97
+\mdf@frametitleaboveskip@length=\skip98
+\mdf@frametitlebelowskip@length=\skip99
+\mdf@frametitlerulewidth@length=\skip100
+\mdf@frametitleleftmargin@length=\skip101
+\mdf@frametitlerightmargin@length=\skip102
+\mdf@shadowsize@length=\skip103
+\mdf@extratopheight@length=\skip104
+\mdf@subtitleabovelinewidth@length=\skip105
+\mdf@subtitlebelowlinewidth@length=\skip106
+\mdf@subtitleaboveskip@length=\skip107
+\mdf@subtitlebelowskip@length=\skip108
+\mdf@subtitleinneraboveskip@length=\skip109
+\mdf@subtitleinnerbelowskip@length=\skip110
+\mdf@subsubtitleabovelinewidth@length=\skip111
+\mdf@subsubtitlebelowlinewidth@length=\skip112
+\mdf@subsubtitleaboveskip@length=\skip113
+\mdf@subsubtitlebelowskip@length=\skip114
+\mdf@subsubtitleinneraboveskip@length=\skip115
+\mdf@subsubtitleinnerbelowskip@length=\skip116
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box74
+\mdf@footnotebox=\box75
+\mdf@splitbox@one=\box76
+\mdf@splitbox@two=\box77
+\mdf@splitbox@save=\box78
+\mdfsplitboxwidth=\skip117
+\mdfsplitboxtotalwidth=\skip118
+\mdfsplitboxheight=\skip119
+\mdfsplitboxdepth=\skip120
+\mdfsplitboxtotalheight=\skip121
+\mdfframetitleboxwidth=\skip122
+\mdfframetitleboxtotalwidth=\skip123
+\mdfframetitleboxheight=\skip124
+\mdfframetitleboxdepth=\skip125
+\mdfframetitleboxtotalheight=\skip126
+\mdffootnoteboxwidth=\skip127
+\mdffootnoteboxtotalwidth=\skip128
+\mdffootnoteboxheight=\skip129
+\mdffootnoteboxdepth=\skip130
+\mdffootnoteboxtotalheight=\skip131
+\mdftotallinewidth=\skip132
+\mdfboundingboxwidth=\skip133
+\mdfboundingboxtotalwidth=\skip134
+\mdfboundingboxheight=\skip135
+\mdfboundingboxdepth=\skip136
+\mdfboundingboxtotalheight=\skip137
+\mdf@freevspace@length=\skip138
+\mdf@horizontalwidthofbox@length=\skip139
+\mdf@verticalmarginwhole@length=\skip140
+\mdf@horizontalspaceofbox=\skip141
+\mdfsubtitleheight=\skip142
+\mdfsubsubtitleheight=\skip143
+\c@mdfcountframes=\count181
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \newmdtheoremenv with sig. 'O{} m o m o ' on line 601.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \mdtheorem with sig. ' O{} m o m o ' on line 701.
+.................................................
+\mdf@envdepth=\count182
+\c@mdf@env@i=\count183
+\c@mdf@env@ii=\count184
+\c@mdf@zref@counter=\count185
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+\c@example=\count186
+\c@theorem=\count187
+\c@lemma=\count188
+Package color Info: Redefining color ForestGreen on input line 405.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+(/home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.aux)
+\openout1 = `thesis-kdyoung.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead twoside 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=642.45653pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=13.08827pt
+* \headheight=14.5pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=56.9055pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count189
+\scratchdimen=\dimen256
+\scratchbox=\box79
+\nofMPsegments=\count190
+\nofMParguments=\count191
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count192
+\MPscratchDim=\dimen257
+\MPnumerator=\count193
+\makeMPintoPDFobject=\count194
+\everyMPtoPDFconversion=\toks35
+)
+\c@lstlisting=\count195
+\AtBeginShipoutBox=\box80
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 37.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 37.
+
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+) [2]
+(/home/ken/repos/sualbsp-2/thesis/acknowledge.tex [3] [4
+
+]
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5])
+(/home/ken/repos/sualbsp-2/thesis/abstract.tex [6]) [7
+
+] [8
+
+]
+(/home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.toc [9] [10])
+\tf@toc=\write3
+\openout3 = `thesis-kdyoung.toc'.
+
+ [11] [12
+
+]
+(/home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.lof)
+\tf@lof=\write4
+\openout4 = `thesis-kdyoung.lof'.
+
+ [13] [14
+
+]
+(/home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.lot)
+\tf@lot=\write5
+\openout5 = `thesis-kdyoung.lot'.
+
+ [15] [16
+
+]
+(/home/ken/repos/sualbsp-2/thesis/chap_intro.tex
+Chapter 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 102.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 102.
+Package epstopdf Info: Source file: <images/precgraphSimple.eps>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 9537 bytes
+(epstopdf)             Output file: <images/precgraphSimple-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 5103 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/precgraphSimple-eps
+-converted-to.pdf images/precgraphSimple.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/precgraphSimple-eps-converted-to.pdf, id=67, 243.91125pt x 179.67125pt>
+File: images/precgraphSimple-eps-converted-to.pdf Graphic file (type pdf)
+<use images/precgraphSimple-eps-converted-to.pdf>
+Package pdftex.def Info: images/precgraphSimple-eps-converted-to.pdf used on in
+put line 132.
+(pdftex.def)             Requested size: 192.0548pt x 141.47264pt.
+Package epstopdf Info: Source file: <images/exSimpleFeas.eps>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 13669 bytes
+(epstopdf)             Output file: <images/exSimpleFeas-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 6894 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/exSimpleFeas-eps-co
+nverted-to.pdf images/exSimpleFeas.eps>
+(epstopdf)             \includegraphics on input line 142.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/exSimpleFeas-eps-converted-to.pdf, id=68, 327.2225pt x 270.00874pt>
+File: images/exSimpleFeas-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/exSimpleFeas-eps-converted-to.pdf>
+Package pdftex.def Info: images/exSimpleFeas-eps-converted-to.pdf used on input
+ line 142.
+(pdftex.def)             Requested size: 192.0548pt x 158.47565pt.
+Package epstopdf Info: Source file: <images/exSimpleOpt.eps>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 14022 bytes
+(epstopdf)             Output file: <images/exSimpleOpt-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 6995 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/exSimpleOpt-eps-con
+verted-to.pdf images/exSimpleOpt.eps>
+(epstopdf)             \includegraphics on input line 151.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/exSimpleOpt-eps-converted-to.pdf, id=69, 327.2225pt x 270.00874pt>
+File: images/exSimpleOpt-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/exSimpleOpt-eps-converted-to.pdf>
+Package pdftex.def Info: images/exSimpleOpt-eps-converted-to.pdf used on input 
+line 151.
+(pdftex.def)             Requested size: 192.0548pt x 158.47565pt.
+ [2]
+Package epstopdf Info: Source file: <images/IntroForwBackSetupEx.eps>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 21369 bytes
+(epstopdf)             Output file: <images/IntroForwBackSetupEx-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 9363 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/IntroForwBackSetupE
+x-eps-converted-to.pdf images/IntroForwBackSetupEx.eps>
+(epstopdf)             \includegraphics on input line 185.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/IntroForwBackSetupEx-eps-converted-to.pdf, id=74, 455.7025pt x 175.6562
+5pt>
+File: images/IntroForwBackSetupEx-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/IntroForwBackSetupEx-eps-converted-to.pdf>
+Package pdftex.def Info: images/IntroForwBackSetupEx-eps-converted-to.pdf used 
+on input line 185.
+(pdftex.def)             Requested size: 341.43437pt x 131.61319pt.
+ [3 </home/ken/repos/sualbsp-2/thesis/images/precgraphSimple-eps-converted-to.p
+df> </home/ken/repos/sualbsp-2/thesis/images/exSimpleFeas-eps-converted-to.pdf>
+ </home/ken/repos/sualbsp-2/thesis/images/exSimpleOpt-eps-converted-to.pdf>]
+Package mdframed Info: mdframed works in twoside mode on input line 216.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 216.
+
+Overfull \hbox (6.61479pt too wide) in paragraph at lines 217--227
+[]\OT1/cmr/bx/n/12 Example 2. []\OT1/cmr/m/n/12 Again con-sider the in-stance f
+rom Ex-am-ple 1[], but now with sequence-
+ []
+
+Package epstopdf Info: Source file: <images/exSimpleSetupFeas.eps>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 22638 bytes
+(epstopdf)             Output file: <images/exSimpleSetupFeas-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 10670 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/exSimpleSetupFeas-e
+ps-converted-to.pdf images/exSimpleSetupFeas.eps>
+(epstopdf)             \includegraphics on input line 287.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/exSimpleSetupFeas-eps-converted-to.pdf, id=110, 327.2225pt x 270.00874p
+t>
+File: images/exSimpleSetupFeas-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/exSimpleSetupFeas-eps-converted-to.pdf>
+Package pdftex.def Info: images/exSimpleSetupFeas-eps-converted-to.pdf used on 
+input line 287.
+(pdftex.def)             Requested size: 200.59245pt x 165.52084pt.
+Package epstopdf Info: Source file: <images/exSimpleSetupOpt.eps>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 22616 bytes
+(epstopdf)             Output file: <images/exSimpleSetupOpt-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 10659 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/exSimpleSetupOpt-ep
+s-converted-to.pdf images/exSimpleSetupOpt.eps>
+(epstopdf)             \includegraphics on input line 295.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/exSimpleSetupOpt-eps-converted-to.pdf, id=111, 327.2225pt x 270.00874pt
+>
+File: images/exSimpleSetupOpt-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/exSimpleSetupOpt-eps-converted-to.pdf>
+Package pdftex.def Info: images/exSimpleSetupOpt-eps-converted-to.pdf used on i
+nput line 295.
+(pdftex.def)             Requested size: 200.59245pt x 165.52084pt.
+ [4 </home/ken/repos/sualbsp-2/thesis/images/IntroForwBackSetupEx-eps-converted
+-to.pdf>] [5 </home/ken/repos/sualbsp-2/thesis/images/exSimpleSetupFeas-eps-con
+verted-to.pdf> </home/ken/repos/sualbsp-2/thesis/images/exSimpleSetupOpt-eps-co
+nverted-to.pdf>] [6]
+[7]) (/home/ken/repos/sualbsp-2/thesis/chap_theory.tex [8]
+Chapter 2.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Package epstopdf Info: Source file: <images/forwBackSetupExB.eps>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 25510 bytes
+(epstopdf)             Output file: <images/forwBackSetupExB-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-05-13 09:53:12
+(epstopdf)                    size: 10952 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/forwBackSetupExB-ep
+s-converted-to.pdf images/forwBackSetupExB.eps>
+(epstopdf)             \includegraphics on input line 153.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/forwBackSetupExB-eps-converted-to.pdf, id=204, 443.6575pt x 150.5625pt>
+File: images/forwBackSetupExB-eps-converted-to.pdf Graphic file (type pdf)
+<use images/forwBackSetupExB-eps-converted-to.pdf>
+Package pdftex.def Info: images/forwBackSetupExB-eps-converted-to.pdf used on i
+nput line 153.
+(pdftex.def)             Requested size: 384.1096pt x 130.35193pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Package mdframed Info: mdframed works in twoside mode on input line 203.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 203.
+
+[12 </home/ken/repos/sualbsp-2/thesis/images/forwBackSetupExB-eps-converted-to.
+pdf>] [13]
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+ [14]
+Package mdframed Info: mdframed works in twoside mode on input line 360.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 360.
+
+Overfull \hbox (1.1896pt too wide) in paragraph at lines 375--383
+[]\OT1/cmr/m/n/12 The \OT1/cmtt/m/n/12 cumulative \OT1/cmr/m/n/12 global con-st
+raint was first in-tro-duced by Ag-goun and Beldiceanu[]
+ []
+
+[15]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 421.
+ [16]
+Package mdframed Info: mdframed works in twoside mode on input line 489.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 489.
+ [17]
+Package mdframed Info: mdframed works in twoside mode on input line 515.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 515.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 533.
+Package mdframed Info: mdframed works in twoside mode on input line 559.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 559.
+ [18]
+Underfull \vbox (badness 4454) has occurred while \output is active []
+
+ [19]
+Package epstopdf Info: Source file: <images/bendersAbstract.eps>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 16206 bytes
+(epstopdf)             Output file: <images/bendersAbstract-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 8113 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/bendersAbstract-eps
+-converted-to.pdf images/bendersAbstract.eps>
+(epstopdf)             \includegraphics on input line 664.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/bendersAbstract-eps-converted-to.pdf, id=251, 275.0275pt x 84.315pt>
+File: images/bendersAbstract-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/bendersAbstract-eps-converted-to.pdf>
+Package pdftex.def Info: images/bendersAbstract-eps-converted-to.pdf used on in
+put line 664.
+(pdftex.def)             Requested size: 256.07741pt x 78.51247pt.
+ [20 </home/ken/repos/sualbsp-2/thesis/images/bendersAbstract-eps-converted-to.
+pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+ [22]
+[23] [24]) (/home/ken/repos/sualbsp-2/thesis/chap_mipmodels.tex [25] [26
+
+]
+Chapter 3.
+
+Overfull \hbox (1.96672pt too wide) in paragraph at lines 10--20
+\OT1/cmr/m/n/12 This chap-ter presents three pos-si-ble mixed-integer pro-grams
+ to model the SUALBSP-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+Package mdframed Info: mdframed works in twoside mode on input line 88.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 88.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 107.
+
+[28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+[32] [33] [34]) (/home/ken/repos/sualbsp-2/thesis/chap_benders.tex [35]
+[36
+
+]
+Chapter 4.
+[37]
+Package epstopdf Info: Source file: <images/ourHighLevelBenders.eps>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 32167 bytes
+(epstopdf)             Output file: <images/ourHighLevelBenders-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-05-25 05:33:29
+(epstopdf)                    size: 14372 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/ourHighLevelBenders
+-eps-converted-to.pdf images/ourHighLevelBenders.eps>
+(epstopdf)             \includegraphics on input line 91.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/ourHighLevelBenders-eps-converted-to.pdf, id=325, 359.3425pt x 129.4837
+5pt>
+File: images/ourHighLevelBenders-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/ourHighLevelBenders-eps-converted-to.pdf>
+Package pdftex.def Info: images/ourHighLevelBenders-eps-converted-to.pdf used o
+n input line 91.
+(pdftex.def)             Requested size: 384.1096pt x 138.41779pt.
+ [38 </home/ken/repos/sualbsp-2/thesis/images/ourHighLevelBenders-eps-converted
+-to.pdf>] [39]
+[40] [41] [42] [43] [44] [45]
+Overfull \hbox (1.25122pt too wide) in paragraph at lines 630--633
+\OT1/cmtt/m/n/12 smallest \OT1/cmr/m/n/12 and \OT1/cmtt/m/n/12 smallest[]larges
+t \OT1/cmr/m/n/12 vari-able se-lec-tion strate-gies in-stead of \OT1/cmtt/m/n/1
+2 first[]fail\OT1/cmr/m/n/12 . 
+ []
+
+[46] [47]
+Package mdframed Info: mdframed works in twoside mode on input line 752.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 752.
+Package mdframed Info: mdframed works in twoside mode on input line 779.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 779.
+ [48]
+Package mdframed Info: mdframed works in twoside mode on input line 843.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 843.
+ [49] [50]
+Package mdframed Info: mdframed works in twoside mode on input line 934.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 934.
+Package mdframed Info: mdframed works in twoside mode on input line 989.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 989.
+ [51]
+Package mdframed Info: Not enough space on this page on input line 991.
+ [52]
+Package mdframed Info: mdframed works in twoside mode on input line 1086.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1086.
+ [53] [54]
+Package mdframed Info: mdframed works in twoside mode on input line 1218.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1218.
+ [55]
+Package epstopdf Info: Source file: <images/Benders-Optimality-Flowchart.eps>
+(epstopdf)                    date: 2017-05-19 13:40:27
+(epstopdf)                    size: 46017 bytes
+(epstopdf)             Output file: <images/Benders-Optimality-Flowchart-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2017-05-19 13:40:27
+(epstopdf)                    size: 17902 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Benders-Optimality-
+Flowchart-eps-converted-to.pdf images/Benders-Optimality-Flowchart.eps>
+(epstopdf)             \includegraphics on input line 1319.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Benders-Optimality-Flowchart-eps-converted-to.pdf, id=415, 419.5675pt x
+ 636.3775pt>
+File: images/Benders-Optimality-Flowchart-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use images/Benders-Optimality-Flowchart-eps-converted-to.pdf>
+Package pdftex.def Info: images/Benders-Optimality-Flowchart-eps-converted-to.p
+df used on input line 1319.
+(pdftex.def)             Requested size: 402.3897pt x 610.33173pt.
+
+[56] [57 </home/ken/repos/sualbsp-2/thesis/images/Benders-Optimality-Flowchart-
+eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <images/Optimality-SP-Flowchart.eps>
+(epstopdf)                    date: 2017-05-19 13:40:27
+(epstopdf)                    size: 42324 bytes
+(epstopdf)             Output file: <images/Optimality-SP-Flowchart-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2017-05-19 13:40:27
+(epstopdf)                    size: 16852 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Optimality-SP-Flowc
+hart-eps-converted-to.pdf images/Optimality-SP-Flowchart.eps>
+(epstopdf)             \includegraphics on input line 1352.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Optimality-SP-Flowchart-eps-converted-to.pdf, id=444, 423.5825pt x 423.
+5825pt>
+File: images/Optimality-SP-Flowchart-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use images/Optimality-SP-Flowchart-eps-converted-to.pdf>
+Package pdftex.def Info: images/Optimality-SP-Flowchart-eps-converted-to.pdf us
+ed on input line 1352.
+(pdftex.def)             Requested size: 405.45047pt x 405.46472pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58 </home/ken/repos/sualbsp-2/thesis/images/Optimality-SP-Flowchart-eps-conve
+rted-to.pdf>]) (/home/ken/repos/sualbsp-2/thesis/chap_experiments.tex [59] [60
+
+]
+Chapter 5.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+[62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+[64] [65]
+Underfull \vbox (badness 1460) has occurred while \output is active []
+
+ [66]
+[67] [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69])
+(/home/ken/repos/sualbsp-2/thesis/chap_conclusion.tex [70]
+Chapter 6.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71
+
+])
+(/home/ken/repos/sualbsp-2/thesis/chap_appendix.tex [72]
+Appendix A.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73
+
+]
+[74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75])
+[76] [77] [78] [79] [80
+
+] (/home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.bbl
+Underfull \hbox (badness 1253) in paragraph at lines 31--39
+[]\OT1/cmr/m/n/12 Ali Al-lahverdi and H.M. Soroush.  The sig-nif-i-cance of re-
+duc-ing setup
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 31--39
+\OT1/cmr/m/n/12 times/setup costs.  \OT1/cmr/m/it/12 Eu-ro-pean Jour-nal of Op-
+er-a-tional Re-search\OT1/cmr/m/n/12 , 187(3):
+ []
+
+Missing character: There is no Å in font cmr12!
+Missing character: There is no ¡ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¡ in font cmr12!
+[81
+
+] [82]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no § in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no § in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ‡ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no § in font cmr12!
+ [83] [84]
+Underfull \hbox (badness 1331) in paragraph at lines 386--395
+\OT1/cmr/m/n/12 S0167-[]8191(97 ) 00044-[]6$.  URL $\OT1/cmtt/m/n/12 http : / /
+ www . sciencedirect . com / science /
+ []
+
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 432--440
+\OT1/cmr/m/n/12 URL $\OT1/cmtt/m/n/12 https : / / www . scopus . com / inward /
+ record . uri ? eid = 2-[]s2 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--440
+\OT1/cmtt/m/n/12 0-[]85009384722 & doi = 10 . 1016 % 2fj . ejor . 2016 . 12 . 0
+05 & partnerID = 40 &
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 457--464
+[]\OT1/cmr/m/n/12 Tjendera San-toso, Shab-bir Ahmed, Marc Goetschal-ckx, and Al
+exan-der
+ []
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no “ in font cmr12!
+
+Underfull \hbox (badness 1661) in paragraph at lines 473--481
+\OT1/cmr/m/n/12 com-pu-ta-tional com-par-i-son.  \OT1/cmr/m/it/12 Eu-ro-pean Jo
+ur-nal of Op-er-a-tional Re-search\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 473--481
+\OT1/cmr/m/n/12 S0377-[]2217(98 ) 00173-[]8$.  URL $\OT1/cmtt/m/n/12 http : / /
+ www . sciencedirect . com / science /
+ []
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 491--498
+\OT1/cmr/m/n/12 ter J. Stuckey.  \OT1/cmr/m/it/12 An In-tro-duc-tion to Search 
+Com-bi-na-tors\OT1/cmr/m/n/12 , pages 2--16.
+ []
+
+[86]
+Underfull \hbox (badness 1019) in paragraph at lines 512--519
+\OT1/cmr/m/n/12 cu-mu-la-tive prop-a-ga-tor.  \OT1/cmr/m/it/12 Con-straints\OT1
+/cmr/m/n/12 , 16(3):250--282, 2011.  ISSN 1572-
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 533--541
+\OT1/cmr/m/n/12 Hei-del-berg, 2013. Springer Berlin Hei-del-berg.  ISBN 978-3-6
+42-40627-0.
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 533--541
+\OT1/cmr/m/n/12 doi: $10 . 1007 / 978-[]3-[]642-[]40627-[]0[]47$.  URL $\OT1/cm
+tt/m/n/12 http : / / dx . doi . org / 10 . 1007 /
+ []
+
+[87]) [88] (/home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.aux) ) 
+Here is how much of TeX's memory you used:
+ 15643 strings out of 493029
+ 273753 string characters out of 6136235
+ 586677 words of memory out of 5000000
+ 18891 multiletter control sequences out of 15000+600000
+ 18345 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 49i,15n,49p,10404b,1639s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/t
+exlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on /home/ken/repos/sualbsp-2/thesis/thesis-kdyoung.pdf (104 page
+s, 571271 bytes).
+PDF statistics:
+ 639 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+

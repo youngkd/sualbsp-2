@@ -1,0 +1,72 @@
+\contentsline {chapter}{Acknowledgements}{v}
+\contentsline {chapter}{Abstract}{vii}
+\contentsline {chapter}{Contents}{ix}
+\contentsline {chapter}{List of Figures}{xiii}
+\contentsline {chapter}{List of Tables}{xv}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Preliminaries and Examples}{2}
+\contentsline {section}{\numberline {1.2}Motivation}{4}
+\contentsline {subsection}{\numberline {1.2.1}Why the SUALBSP?}{5}
+\contentsline {subsection}{\numberline {1.2.2}Why Benders Decomposition?}{6}
+\contentsline {section}{\numberline {1.3}Problem Definition}{7}
+\contentsline {chapter}{\numberline {2}Theoretical Background}{9}
+\contentsline {section}{\numberline {2.1}Assembly Line Balancing}{9}
+\contentsline {subsection}{\numberline {2.1.1}Simple Assembly Line Balancing Problem}{10}
+\contentsline {subsection}{\numberline {2.1.2}Setup Assembly Line Balancing and Scheduling Problem}{11}
+\contentsline {section}{\numberline {2.2}Mixed Integer Programming}{12}
+\contentsline {subsection}{\numberline {2.2.1}Branch and Bound}{13}
+\contentsline {subsection}{\numberline {2.2.2}MIP Solver: Gurobi\xspace }{13}
+\contentsline {section}{\numberline {2.3}Constraint Programming}{14}
+\contentsline {subsection}{\numberline {2.3.1}Global Constraints}{15}
+\contentsline {subsection}{\numberline {2.3.2}User-Defined Search Procedures}{16}
+\contentsline {subsection}{\numberline {2.3.3}CP Solver: \texttt {Chuffed}\xspace }{18}
+\contentsline {section}{\numberline {2.4}Benders Decomposition}{19}
+\contentsline {subsection}{\numberline {2.4.1}Classical Benders}{20}
+\contentsline {subsection}{\numberline {2.4.2}Logic-Based Benders}{22}
+\contentsline {subsection}{\numberline {2.4.3}Hybrid-Benders}{24}
+\contentsline {subsection}{\numberline {2.4.4}Summary}{25}
+\contentsline {chapter}{\numberline {3}Mixed-Integer Programming Formulation}{27}
+\contentsline {section}{\numberline {3.1}First Station-Based Formulation}{29}
+\contentsline {section}{\numberline {3.2}Second Station-Based Formulation}{32}
+\contentsline {section}{\numberline {3.3}Scheduling-Based Formulation}{33}
+\contentsline {section}{\numberline {3.4}Valid Inequalities}{34}
+\contentsline {section}{\numberline {3.5}Summary}{35}
+\contentsline {chapter}{\numberline {4}Benders Decomposition}{37}
+\contentsline {section}{\numberline {4.1}The Decomposition}{37}
+\contentsline {section}{\numberline {4.2}Types of Sub-Problems}{38}
+\contentsline {subsection}{\numberline {4.2.1}Feasibility Sub-Problems}{38}
+\contentsline {subsection}{\numberline {4.2.2}Optimality Sub-Problems}{39}
+\contentsline {section}{\numberline {4.3}Relaxed Master Problem}{40}
+\contentsline {section}{\numberline {4.4}Sub-Problems}{41}
+\contentsline {subsection}{\numberline {4.4.1}MIP Sub-Problem Formulation}{41}
+\contentsline {subsection}{\numberline {4.4.2}CP Sub-Problem Formulation}{42}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Basic CP Model}{42}
+\contentsline {subsubsection}{\numberline {4.4.2.2}Global Scheduling Constraints}{43}
+\contentsline {subsubsection}{\numberline {4.4.2.3}Search Procedure}{44}
+\contentsline {subsubsection}{\numberline {4.4.2.4}Priority Search}{45}
+\contentsline {subsection}{\numberline {4.4.3}TSP Sub-Problem Formulation}{46}
+\contentsline {section}{\numberline {4.5}Cuts}{47}
+\contentsline {subsection}{\numberline {4.5.1}Nogood Cut}{47}
+\contentsline {subsection}{\numberline {4.5.2}First Infer Cut}{49}
+\contentsline {subsection}{\numberline {4.5.3}Second Infer Cut}{50}
+\contentsline {subsection}{\numberline {4.5.4}Third Infer Cut}{52}
+\contentsline {subsection}{\numberline {4.5.5}Global Bound}{53}
+\contentsline {subsection}{\numberline {4.5.6}Logic Cut}{54}
+\contentsline {section}{\numberline {4.6}The Algorithm}{55}
+\contentsline {subsection}{\numberline {4.6.1}The Relaxed Master Problem}{56}
+\contentsline {subsection}{\numberline {4.6.2}The Sub-Problem}{56}
+\contentsline {subsection}{\numberline {4.6.3}Heuristic Approach}{59}
+\contentsline {chapter}{\numberline {5}Computational Experiments}{61}
+\contentsline {section}{\numberline {5.1}Data}{62}
+\contentsline {section}{\numberline {5.2}MIP Formulations}{62}
+\contentsline {section}{\numberline {5.3}Cuts}{64}
+\contentsline {subsection}{\numberline {5.3.1}Nogood Cuts}{64}
+\contentsline {subsection}{\numberline {5.3.2}Cutting Procedure}{65}
+\contentsline {section}{\numberline {5.4}CP Sub-Problem}{67}
+\contentsline {subsection}{\numberline {5.4.1}Model Formulation}{67}
+\contentsline {subsection}{\numberline {5.4.2}Search Strategy}{68}
+\contentsline {section}{\numberline {5.5}Benchmark Experiments}{68}
+\contentsline {chapter}{\numberline {6}Conclusion}{71}
+\contentsline {section}{\numberline {6.1}Future Work}{72}
+\contentsline {chapter}{\numberline {A}Appendix}{73}
+\contentsline {chapter}{References}{81}

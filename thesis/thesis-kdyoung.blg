@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: thesis-kdyoung.aux
+The style file: myplainnat.bst
+Database file #1: references.bib
+Repeated entry---line 104 of file references.bib
+ : @misc{Young2017b
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--can't use both author and editor fields in Demassey2005
+Warning--can't use both author and editor fields in Ehlers2016
+Warning--can't use both author and editor fields in Li2015
+Warning--can't use both author and editor fields in Lodi2010
+Warning--can't use both author and editor fields in Schrijvers2013a
+You've used 66 entries,
+            2773 wiz_defined-function locations,
+            1200 strings with 21967 characters,
+and the built_in function-call counts, 34403 in all, are:
+= -- 3436
+> -- 1649
+< -- 58
++ -- 561
+- -- 491
+* -- 2902
+:= -- 5278
+add.period$ -- 357
+call.type$ -- 66
+change.case$ -- 350
+chr.to.int$ -- 62
+cite$ -- 137
+duplicate$ -- 1482
+empty$ -- 2742
+format.name$ -- 611
+if$ -- 7357
+int.to.chr$ -- 5
+int.to.str$ -- 1
+missing$ -- 67
+newline$ -- 486
+num.names$ -- 276
+pop$ -- 540
+preamble$ -- 1
+purify$ -- 293
+quote$ -- 0
+skip$ -- 1137
+stack$ -- 0
+substring$ -- 1621
+swap$ -- 223
+text.length$ -- 16
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 691
+warning$ -- 5
+while$ -- 317
+width$ -- 0
+write$ -- 1185
+(There was 1 error message)

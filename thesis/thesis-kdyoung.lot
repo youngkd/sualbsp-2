@@ -1,0 +1,32 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Forward setup times}}{5}
+\contentsline {table}{\numberline {1.2}{\ignorespaces Backward setup times}}{5}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Examples of MiniZinc's variable selection criteria}}{17}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Examples of MiniZinc's variable splitting methods}}{17}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Notation Summary}}{28}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Decision variables of FSBF-2}}{29}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Decision variables of SSBF-2}}{32}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Decision variables of sub-problem $k$ at iteration $\mu $}}{41}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Notation for proofs}}{47}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Dataset summary}}{63}
+\contentsline {table}{\numberline {5.2}{\ignorespaces FSBF-2 formulations tested on classes 1,2 and 3}}{64}
+\contentsline {table}{\numberline {5.3}{\ignorespaces SCBF-2 formulations tested on classes 1,2 and 3}}{65}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Benders algorithm tested on class 1 with nogood cuts}}{65}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Benders cutting strategies compared on class 1}}{66}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Benders cutting strategies compared on class 2}}{67}
+\contentsline {table}{\numberline {5.7}{\ignorespaces CP formulations compared on classes 1 and 2 when $\alpha =1.00$}}{68}
+\contentsline {table}{\numberline {5.8}{\ignorespaces CP search strategies compared on class 2 when $\alpha =1.00$}}{69}
+\contentsline {table}{\numberline {5.9}{\ignorespaces MIP and CP sub-problem formulations compared on class 2}}{69}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Benchmark results of our final Benders decomposition}}{70}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Benders decomposition compared to pure MIP formulations}}{70}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Breakdown of all 1076 adapted SBF2 instances}}{77}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Full results of FSBF-2 with (3.46\hbox {}) on classes 1,2 and 3}}{78}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Full results of SCBF-2 with (3.46\hbox {}) on classes 1,2 and 3}}{79}
